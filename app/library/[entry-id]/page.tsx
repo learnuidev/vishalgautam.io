@@ -19,7 +19,7 @@ export default function LibraryEntry() {
       <section className="mt-24">
         <Link
           href="/library"
-          className="text-sm mb-10 flex space-x-2 text-gray-500 items-center"
+          className="text-sm mb-10 flex space-x-2 text-gray-500 items-center dark:hover:text-white hover:text-black transition"
         >
           {" "}
           <MoveLeft size={16} />
