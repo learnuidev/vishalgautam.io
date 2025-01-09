@@ -13,7 +13,9 @@ export default function Library() {
       return entries;
     }
     return entries.filter((entry) => {
-      return JSON.stringify(entry)?.includes(filteredState);
+      return JSON.stringify(entry)
+        ?.toLowerCase()
+        ?.includes(filteredState?.toLowerCase());
     });
   }, [filteredState]);
   return (

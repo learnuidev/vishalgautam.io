@@ -12,6 +12,8 @@ import {
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
 function NavMobile() {
   return (
@@ -59,26 +61,18 @@ function NavItemLink({
 function NavDesktop() {
   return (
     <nav className="hidden sm:block">
-      <div className="flex space-x-12">
+      <div className="flex space-x-12 items-center">
         <NavItemLink title="Library" href="/library">
-          <span>
-            <Library />
-          </span>
+          <Library />
         </NavItemLink>
         <NavItemLink title="Courses" href="/courses">
-          <span>
-            <Brain />
-          </span>
+          <Brain />
         </NavItemLink>
         <NavItemLink title="Projects" href="/projects">
-          <span>
-            <Wand />
-          </span>
+          <Wand />
         </NavItemLink>
         <NavItemLink title="Work With Me" href="/work">
-          <span>
-            <BriefcaseBusiness />
-          </span>
+          <BriefcaseBusiness />
         </NavItemLink>
       </div>
     </nav>
@@ -87,8 +81,9 @@ function NavDesktop() {
 
 export const NavBar = () => {
   const { setTheme, theme } = useTheme();
+
   return (
-    <header className="flex justify-between my-4">
+    <header className="flex justify-between my-4 items-center">
       {" "}
       <Link href="/" className="font-bold hidden sm:block">
         VG
@@ -97,13 +92,23 @@ export const NavBar = () => {
         <NavDesktop />
         <NavMobile />
       </>
-      <button
-        onClick={() => {
-          setTheme((prev) => (prev === "light" ? "dark" : "light"));
-        }}
-      >
-        {theme === "light" ? <Moon /> : <Sun />}
-      </button>
+      <div className="space-x-6 flex items-center">
+        <button
+          onClick={() => {
+            setTheme((prev) => (prev === "light" ? "dark" : "light"));
+          }}
+        >
+          {theme === "light" ? <Moon /> : <Sun />}
+        </button>
+        <SignedOut>
+          <Button variant="outline">
+            <SignInButton />
+          </Button>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
     </header>
   );
 };
