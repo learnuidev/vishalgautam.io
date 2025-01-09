@@ -1,5 +1,5 @@
 const homeBanner = {
-  title: "Hey, I'm Vishal",
+  title: "Yo, I'm Vishal",
   description:
     "Welcome. I'm a software developer and content creator from Canada. Here, I share what I've been working on recently and things I've learned along the way.",
 };
