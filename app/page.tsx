@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { EntryList } from "./library/components/entry-list";
 import { entries } from "./library/state/entries";
+import { NewsLetterSubscriptionForm } from "@/components/newsletter-subscription-form";
 
 const homeBanner = {
   title: "Yo, I'm Vishal",
@@ -30,6 +31,8 @@ export default function Home() {
           View Library
         </Link>
       </section>
+
+      <NewsLetterSubscriptionForm />
     </div>
   );
 }
