@@ -46,7 +46,7 @@ export const NewsLetterSubscriptionForm = () => {
               setEmail(event.target.value);
             }}
             value={email}
-            className="grow rounded-md border border-slate-500 bg-transparent px-3 py-1 text-white outline-none placeholder:text-gray-500 focus-within:border-slate-300 sm:border-none"
+            className="grow rounded-md border border-slate-500 bg-transparent px-3 py-1 dark:text-white outline-none placeholder:text-gray-500 focus-within:border-slate-300 sm:border-none"
             placeholder="your@email.com"
           />
           <button
