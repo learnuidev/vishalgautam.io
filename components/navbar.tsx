@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 function NavMobile() {
   return (
@@ -29,10 +30,16 @@ function NavItemLink({
   href: string;
   title: string;
 }) {
+  const pathName = usePathname();
   return (
     <Link
       href={href}
-      className={cn("flex flex-col items-center hover:text-rose-400")}
+      className={cn(
+        "flex flex-col items-center hover:text-rose-400 transition",
+        pathName?.includes(href)
+          ? "text-rose-400 border-b-2 border-rose-400"
+          : "dark:text-gray-400 text-gray-600"
+      )}
     >
       <span className="uppercase text-sm">{title}</span>
     </Link>
