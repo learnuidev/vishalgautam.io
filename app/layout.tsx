@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Alegreya, Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavBar } from "@/components/navbar";
@@ -12,9 +12,10 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
 });
 
+const alegreya = Alegreya({ subsets: ["latin"], variable: "--font-alegreya" });
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased`}
         >
           <ThemeProvider
             attribute="class"

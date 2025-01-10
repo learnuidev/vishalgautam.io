@@ -70,3 +70,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+h6 {
+  font-family: var(--font-alegreya);
+}

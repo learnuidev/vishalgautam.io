@@ -100,8 +100,8 @@ export const NavBar = () => {
     <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
       <div className="flex justify-between my-4 items-center p-4 max-w-3xl mx-auto">
         {" "}
-        <Link href="/" className="font-bold hidden sm:block">
-          VG
+        <Link href="/" className="font-bold hidden sm:block text-4xl">
+          <h6>VG</h6>
         </Link>
         <>
           <NavDesktop />

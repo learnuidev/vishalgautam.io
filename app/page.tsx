@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="mt-40">
       <section className="mb-24">
-        <h2 className="text-2xl font-bold">{homeBanner.title}</h2>
+        <p className="text-2xl font-bold">{homeBanner.title}</p>
         <p className="dark:text-gray-400 mt-4">{homeBanner.description}</p>
       </section>
 
