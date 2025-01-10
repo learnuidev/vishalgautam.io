@@ -31,7 +31,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased p-4 max-w-3xl mx-auto`}
+          className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
         >
           <ThemeProvider
             attribute="class"
@@ -40,7 +40,8 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <NavBar />
-            {children}
+
+            <div className="p-4 max-w-3xl mx-auto">{children}</div>
           </ThemeProvider>
         </body>
       </html>

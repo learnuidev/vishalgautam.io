@@ -19,7 +19,7 @@ export default function Library() {
   }, [filteredState]);
   return (
     <main>
-      <section className="mt-24">
+      <section className="mt-40">
         <h1 className="text-2xl font-bold mb-12">Library</h1>
 
         <Input

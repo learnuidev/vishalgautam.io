@@ -13,19 +13,19 @@ const homeBanner = {
 
 export default function Home() {
   return (
-    <div className="mt-32">
+    <div className="mt-40">
       <section className="mb-24">
         <h2 className="text-2xl font-bold">{homeBanner.title}</h2>
         <p className="dark:text-gray-400 mt-4">{homeBanner.description}</p>
       </section>
 
-      <section>
+      <section className="mb-24">
         <h1 className="text-2xl font-bold mb-12">Recently Published</h1>
 
         <EntryList entries={entries} />
 
         <Link
-          className="decoration-rose-400 underline-offset-4 underline mt-4 inline-block"
+          className="decoration-rose-400 underline-offset-4 dark:text-gray-400 text-gray-600 text-sm underline mt-4 inline-block"
           href="/library"
         >
           View Library

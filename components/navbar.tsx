@@ -41,9 +41,9 @@ function NavItemLink({
     <Link
       href={href}
       className={cn(
-        "flex flex-col items-center hover:text-rose-400 transition",
+        "flex flex-col items-center hover:text-rose-400 dark:hover:text-white transition",
         pathName?.includes(href)
-          ? "text-rose-400 border-b-2 border-rose-400"
+          ? "dark:text-white text-rose-400 border-b-2 border-rose-400"
           : "dark:text-gray-400 text-gray-600"
       )}
     >
@@ -97,51 +97,53 @@ export const NavBar = () => {
   const [playSwitchOn] = useSound(switchOnUrl);
 
   return (
-    <header className="flex justify-between my-4 items-center">
-      {" "}
-      <Link href="/" className="font-bold hidden sm:block">
-        VG
-      </Link>
-      <>
-        <NavDesktop />
-        <NavMobile />
-      </>
-      <div className="space-x-6 flex items-center">
-        <button
-          onClick={() => {
-            if (isPlaying) {
-              pause();
-              setIsPlaying(false);
-            } else {
-              playMusic();
-              setIsPlaying(true);
-            }
-          }}
-        >
-          {isPlaying ? <Volume /> : <Volume2 />}
-        </button>
-        <button
-          onClick={() => {
-            setTheme((prev) => {
-              if (prev === "light") {
-                playSwitchOff();
-                return "dark";
+    <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
+      <div className="flex justify-between my-4 items-center p-4 max-w-3xl mx-auto">
+        {" "}
+        <Link href="/" className="font-bold hidden sm:block">
+          VG
+        </Link>
+        <>
+          <NavDesktop />
+          <NavMobile />
+        </>
+        <div className="space-x-6 flex items-center">
+          <button
+            onClick={() => {
+              if (isPlaying) {
+                pause();
+                setIsPlaying(false);
+              } else {
+                playMusic();
+                setIsPlaying(true);
               }
-              playSwitchOn();
-              return "light";
-            });
-          }}
-        >
-          {theme === "light" ? <Moon /> : <Sun />}
-        </button>
-        <SignedOut>
-          <Button variant="outline">
-            <SignInButton />
-          </Button>
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
+            }}
+          >
+            {isPlaying ? <Volume /> : <Volume2 />}
+          </button>
+          <button
+            onClick={() => {
+              setTheme((prev) => {
+                if (prev === "light") {
+                  playSwitchOff();
+                  return "dark";
+                }
+                playSwitchOn();
+                return "light";
+              });
+            }}
+          >
+            {theme === "light" ? <Moon /> : <Sun />}
+          </button>
+          <SignedOut>
+            <Button variant="outline">
+              <SignInButton />
+            </Button>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
       </div>
     </header>
   );

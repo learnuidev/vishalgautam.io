@@ -18,7 +18,7 @@ export const EntryList = ({
         return (
           <li
             key={JSON.stringify(entry)}
-            className="list-none bg-gray-50 p-4 dark:bg-gray-950"
+            className="list-none bg-gray-50 p-4 dark:bg-[rgb(14,15,16)] rounded-xl"
           >
             <Link href={`/library/${entry?.id}`}>
               <h4 className="font-semibold">{entry.title}</h4>
