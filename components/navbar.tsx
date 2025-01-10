@@ -22,7 +22,9 @@ import { useState } from "react";
 function NavMobile() {
   return (
     <nav className="block sm:hidden">
-      <Link href="/">VG</Link>
+      <Link href="/" className="font-bold text-4xl">
+        <h6>VG</h6>
+      </Link>
     </nav>
   );
 }
@@ -107,7 +109,7 @@ export const NavBar = () => {
           <NavDesktop />
           <NavMobile />
         </>
-        <div className="space-x-6 flex items-center">
+        <div className="space-x-4 flex items-center">
           <button
             onClick={() => {
               if (isPlaying) {

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavBar } from "@/components/navbar";
 import { ClerkProvider } from "@/lib/clerk/clerk-provider";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,20 +32,22 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased`}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased relative`}
           >
             <NavBar />
 
             <div className="p-4 max-w-3xl mx-auto">{children}</div>
-          </ThemeProvider>
-        </body>
+
+            <Footer />
+          </body>
+        </ThemeProvider>
       </html>
     </ClerkProvider>
   );
