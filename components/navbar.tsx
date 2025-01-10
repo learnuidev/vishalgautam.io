@@ -119,7 +119,7 @@ export const NavBar = () => {
               }
             }}
           >
-            {isPlaying ? <Volume /> : <Volume2 />}
+            {isPlaying ? <Volume2 /> : <Volume />}
           </button>
           <button
             onClick={() => {
