@@ -38,7 +38,7 @@ export const NewsLetterSubscriptionForm = () => {
       </p>
 
       <form onSubmit={submitForm}>
-        <div className="flex flex-col gap-2 rounded-md focus-within:border-slate-300 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:border sm:border-slate-500 dark:sm:border-slate-800 sm:p-1">
+        <div className="flex bg-white dark:bg-[rgb(10,11,12)] flex-col gap-2 rounded-md focus-within:border-slate-300 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:border sm:border-slate-500 dark:sm:border-slate-800 sm:p-1">
           <input
             type="text"
             name="email"
