@@ -39,11 +39,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <body
-            className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased relative`}
+            className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased flex flex-col h-screen`}
           >
             <NavBar />
 
-            <div className="p-4 max-w-3xl mx-auto">{children}</div>
+            <div className="flex-grow">
+              <div className="p-4 max-w-3xl mx-auto">{children}</div>
+            </div>
 
             <Footer />
           </body>
