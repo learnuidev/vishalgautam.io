@@ -89,14 +89,14 @@ export const NavBar = () => {
   const { setTheme, theme } = useTheme();
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const switchOffUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X1JMEACXMV4CY8ZSHTC0D.m4a`;
-  const switchOnUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X19QJ68E06NA827N5WSTQ.m4a`;
+  const switchUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X1JMEACXMV4CY8ZSHTC0D.m4a`;
+  // const switchOnUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X19QJ68E06NA827N5WSTQ.m4a`;
 
   const musicUrl =
     "https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6XXBGT3NXBE50425NY5YNY.mp3";
   const [playMusic, { pause }] = useSound(musicUrl);
-  const [playSwitchOff] = useSound(switchOffUrl);
-  const [playSwitchOn] = useSound(switchOnUrl);
+  const [playSwitch] = useSound(switchUrl);
+  // const [playSwitchOn] = useSound(switchOnUrl);
 
   return (
     <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
@@ -126,11 +126,10 @@ export const NavBar = () => {
           <button
             onClick={() => {
               setTheme((prev) => {
+                playSwitch();
                 if (prev === "light") {
-                  playSwitchOff();
                   return "dark";
                 }
-                playSwitchOn();
                 return "light";
               });
             }}
