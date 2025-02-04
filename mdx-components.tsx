@@ -15,8 +15,9 @@ const components = {
     <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <h2 className="text-gray-800 font-medium mt-8 mb-3 text-xl" {...props} />
   ),
+
   h3: (props: HeadingProps) => (
     <h3 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
   ),
@@ -37,6 +38,7 @@ const components = {
   strong: (props: ComponentPropsWithoutRef<"strong">) => (
     <strong className="font-medium" {...props} />
   ),
+
   a: ({ href, children, ...props }: AnchorProps) => {
     const className = "text-blue-500 hover:text-blue-700";
     if (href?.startsWith("/")) {
@@ -68,6 +70,13 @@ const components = {
   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
     const codeHTML = highlight(children as string);
     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+  },
+  pre: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
+    return (
+      <pre className="my-12" {...props}>
+        {children}
+      </pre>
+    );
   },
   Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
     <table>

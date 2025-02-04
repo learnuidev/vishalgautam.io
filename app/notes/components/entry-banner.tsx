@@ -8,7 +8,7 @@ export const EntryBanner = ({ entryItem }: { entryItem: Entry }) => {
   return (
     <section className="mt-40 mb-12">
       <Link
-        href="/library"
+        href="/notes"
         className="text-sm mb-10 flex space-x-2 text-gray-500 items-center dark:hover:text-white hover:text-black transition"
       >
         {" "}

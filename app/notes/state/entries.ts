@@ -16,7 +16,7 @@ export const multiLinguqalLocalizationApp: Entry = {
   status: "unpublished",
   tags: ["ai", "programming", "multi-lingual"],
   description:
-    "In this video we will learn about translating your NextJS app into multiple languages using i18next and myelino ai.",
+    "In this tutorial we will learn about translating your NextJS app into multiple languages using i18next and myelino ai.",
 
   blog: ``,
 };
