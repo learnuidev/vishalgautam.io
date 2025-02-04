@@ -20,7 +20,7 @@ export const EntryList = ({
             key={JSON.stringify(entry)}
             className="list-none bg-gray-50 p-4 dark:bg-[rgb(14,15,16)] rounded-xl"
           >
-            <Link href={`/library/${entry?.id}`}>
+            <Link href={`/notes/${entry?.slug}`}>
               <h4 className="font-semibold">{entry.title}</h4>
               <p className="text-gray-500"> {entry.description}</p>
             </Link>

@@ -30,7 +30,6 @@ function NavMobile() {
 }
 
 function NavItemLink({
-  children,
   title,
   href,
 }: {
@@ -52,23 +51,13 @@ function NavItemLink({
       <span className="uppercase text-sm">{title}</span>
     </Link>
   );
-
-  return (
-    <Link
-      href={href}
-      className={cn("flex flex-col items-center dark:hover:text-white")}
-    >
-      {children}
-      <span className="text-[10px] mt-[2px] uppercase">{title}</span>
-    </Link>
-  );
 }
 
 function NavDesktop() {
   return (
     <nav className="hidden sm:block">
       <div className="flex space-x-12 items-center">
-        <NavItemLink title="Library" href="/library">
+        <NavItemLink title="Notes" href="/notes">
           <Library />
         </NavItemLink>
         <NavItemLink title="Courses" href="/courses">

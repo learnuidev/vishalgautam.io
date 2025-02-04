@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { EntryList } from "./library/components/entry-list";
-import { entries } from "./library/state/entries";
+import { EntryList } from "./notes/components/entry-list";
+import { entries } from "./notes/state/entries";
 import { NewsLetterSubscriptionForm } from "@/components/newsletter-subscription-form";
 
 const homeBanner = {
