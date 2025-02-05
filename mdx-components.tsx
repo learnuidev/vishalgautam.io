@@ -12,7 +12,10 @@ type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
 const components = {
   h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
+    <h1
+      className="pt-12 mb-0 fade-in text-2xl font-bold text-center"
+      {...props}
+    />
   ),
   h2: (props: HeadingProps) => (
     <h2 className="text-gray-800 font-medium mt-8 mb-3 text-xl" {...props} />
@@ -31,12 +34,12 @@ const components = {
   ul: (props: ListProps) => (
     <ul className="text-gray-800 list-disc pl-5 space-y-1" {...props} />
   ),
-  li: (props: ListItemProps) => <li className="pl-1" {...props} />,
+  li: (props: ListItemProps) => <li className="px-4" {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
     <em className="font-medium" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<"strong">) => (
-    <strong className="font-medium" {...props} />
+    <strong className="font-bold" {...props} />
   ),
 
   a: ({ href, children, ...props }: AnchorProps) => {
@@ -68,7 +71,7 @@ const components = {
     );
   },
   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
-    const codeHTML = highlight(children as string);
+    const codeHTML = highlight((children || "") as string);
     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
   },
   pre: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {

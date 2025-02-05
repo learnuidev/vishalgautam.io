@@ -10,6 +10,4 @@ const withMdx = createMDX({});
 
 const nextWithMdx = withMdx(nextConfig);
 
-console.log("NEXT WITH MDX", nextWithMdx);
-
 export default nextWithMdx;
