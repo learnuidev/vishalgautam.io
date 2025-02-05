@@ -4,23 +4,22 @@ import Link from "next/link";
 import { EntryList } from "./notes/components/entry-list";
 import { entries } from "./notes/state/entries";
 import { NewsLetterSubscriptionForm } from "@/components/newsletter-subscription-form";
-
-const homeBanner = {
-  title: "Yo, I'm Vishal",
-  description:
-    "Welcome. I'm a senior software developer and content creator from Canada. Here, I share what I've been working on recently and things I've learned along the way.",
-};
+import { useTranslation } from "@/libs/i18n-next/use-translation";
 
 export default function Home() {
+  const { t } = useTranslation(["home", "notes"]);
+
   return (
     <div className="mt-40">
       <section className="mb-24">
-        <p className="text-2xl font-bold">{homeBanner.title}</p>
-        <p className="dark:text-gray-400 mt-4">{homeBanner.description}</p>
+        <p className="text-2xl font-bold">{t("home:title")}</p>
+        <p className="dark:text-gray-400 mt-4">{t("home:description")}</p>
       </section>
 
       <section className="mb-24">
-        <h1 className="text-2xl font-bold mb-12">Recently Published</h1>
+        <h1 className="text-2xl font-bold mb-12">
+          {t("home:recently.published")}
+        </h1>
 
         <EntryList entries={entries} />
 
@@ -28,7 +27,7 @@ export default function Home() {
           className="decoration-rose-400 underline-offset-4 dark:text-gray-400 text-gray-600 text-sm underline mt-4 inline-block"
           href="/notes"
         >
-          View Notes
+          {t("notes:notes.view")}
         </Link>
       </section>
 
