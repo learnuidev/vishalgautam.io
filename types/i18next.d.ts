@@ -1,6 +1,7 @@
 import { i18nOptions } from "@/libs/i18n-next/i18n-config";
 
 import common from "@/locales/en/common.json";
+import langs from "@/locales/en/langs.json";
 import navbar from "@/locales/en/navbar.json";
 import notes from "@/locales/en/notes.json";
 import projects from "@/locales/en/projects.json";
@@ -11,6 +12,7 @@ declare module "i18next" {
     defaultNS: typeof i18nOptions.defaultNS;
     resources: {
       common: typeof common;
+      langs: typeof langs;
       navbar: typeof navbar;
       notes: typeof notes;
       projects: typeof projects;
