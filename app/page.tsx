@@ -26,9 +26,9 @@ export default function Home() {
 
         <Link
           className="decoration-rose-400 underline-offset-4 dark:text-gray-400 text-gray-600 text-sm underline mt-4 inline-block"
-          href="/library"
+          href="/notes"
         >
-          View Library
+          View Notes
         </Link>
       </section>
 

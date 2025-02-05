@@ -45,4 +45,4 @@ export const entries: Entry[] = [
   multiLinguqalLocalizationApp,
   ragApp,
   translationApp,
-];
+]?.filter((item) => item?.status === "published");
