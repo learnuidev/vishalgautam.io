@@ -28,7 +28,7 @@ export default function Projects() {
 
   return (
     <div className="mt-40">
-      <h1 className="text-2xl font-bold mb-12">Projects</h1>{" "}
+      <h1 className="text-2xl font-bold mb-12">{t("projects.title")}</h1>{" "}
       <section className="grid sm:grid-cols-2 grid-cols-1 gap-4">
         {projectsList.map((project) => {
           return (
