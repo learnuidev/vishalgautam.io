@@ -26,15 +26,15 @@ const switchUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-e
 const musicUrl =
   "https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6XXBGT3NXBE50425NY5YNY.mp3";
 
-function NavMobile() {
-  return (
-    <nav className="block sm:hidden">
-      <Link href="/" className="font-bold text-4xl">
-        <h6>VG</h6>
-      </Link>
-    </nav>
-  );
-}
+// function NavMobile() {
+//   return (
+//     <nav className="block sm:hidden">
+//       <Link href="/" className="font-bold text-4xl">
+//         <h6>VG</h6>
+//       </Link>
+//     </nav>
+//   );
+// }
 
 function NavItemLink({
   title,
@@ -95,12 +95,12 @@ export const NavBar = () => {
     <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
       <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         {" "}
-        <Link href="/" className="font-bold hidden sm:block text-4xl">
+        {/* <Link href="/" className="font-bold hidden sm:block text-4xl">
           <h6>VG</h6>
-        </Link>
+        </Link> */}
+        <LanguageSwitcher />
         <>
           <NavDesktop />
-          <NavMobile />
         </>
         <div className="space-x-4 flex items-center">
           <button
@@ -137,7 +137,6 @@ export const NavBar = () => {
           <SignedIn>
             <UserButton />
           </SignedIn>
-          <LanguageSwitcher />
         </div>
       </div>
     </header>
