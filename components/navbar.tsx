@@ -18,6 +18,13 @@ import { usePathname } from "next/navigation";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { useTranslation } from "@/libs/i18n-next/use-translation";
+import { LanguageSwitcher } from "@/libs/i18n-next/language-switcher";
+
+const switchUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X1JMEACXMV4CY8ZSHTC0D.m4a`;
+
+const musicUrl =
+  "https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6XXBGT3NXBE50425NY5YNY.mp3";
 
 function NavMobile() {
   return (
@@ -54,19 +61,20 @@ function NavItemLink({
 }
 
 function NavDesktop() {
+  const { t } = useTranslation("navbar");
   return (
     <nav className="hidden sm:block">
       <div className="flex space-x-12 items-center">
-        <NavItemLink title="Notes" href="/notes">
+        <NavItemLink title={t("notes")} href="/notes">
           <Library />
         </NavItemLink>
-        <NavItemLink title="Courses" href="/courses">
+        <NavItemLink title={t("courses")} href="/courses">
           <Brain />
         </NavItemLink>
-        <NavItemLink title="Projects" href="/projects">
+        <NavItemLink title={t("projects")} href="/projects">
           <Wand />
         </NavItemLink>
-        <NavItemLink title="Work With Me" href="/work">
+        <NavItemLink title={t("workWithMe")} href="/work">
           <BriefcaseBusiness />
         </NavItemLink>
       </div>
@@ -78,18 +86,14 @@ export const NavBar = () => {
   const { setTheme, theme } = useTheme();
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const switchUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X1JMEACXMV4CY8ZSHTC0D.m4a`;
-  // const switchOnUrl = `https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6X19QJ68E06NA827N5WSTQ.m4a`;
-
-  const musicUrl =
-    "https://nomadmethod-api-dev-assetsbucket-2u2iqsv5nizc.s3.us-east-1.amazonaws.com/learnuidev@gmail.com/01JH6XXBGT3NXBE50425NY5YNY.mp3";
   const [playMusic, { pause }] = useSound(musicUrl);
   const [playSwitch] = useSound(switchUrl);
-  // const [playSwitchOn] = useSound(switchOnUrl);
+
+  const { t } = useTranslation("navbar");
 
   return (
     <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
-      <div className="flex justify-between items-center p-4 max-w-3xl mx-auto">
+      <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         {" "}
         <Link href="/" className="font-bold hidden sm:block text-4xl">
           <h6>VG</h6>
@@ -127,12 +131,13 @@ export const NavBar = () => {
           </button>
           <SignedOut>
             <Button variant="outline">
-              <SignInButton />
+              <SignInButton>{t("signIn")}</SignInButton>
             </Button>
           </SignedOut>
           <SignedIn>
             <UserButton />
           </SignedIn>
+          <LanguageSwitcher />
         </div>
       </div>
     </header>

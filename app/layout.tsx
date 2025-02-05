@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { NavBar } from "@/components/navbar";
 import { ClerkProvider } from "@/lib/clerk/clerk-provider";
 import { Footer } from "@/components/footer";
+import { I18NextHtmlProvider } from "@/libs/i18n-next/i18n-next-html-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <I18NextHtmlProvider>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,7 +51,7 @@ export default function RootLayout({
             <Footer />
           </body>
         </ThemeProvider>
-      </html>
+      </I18NextHtmlProvider>
     </ClerkProvider>
   );
 }
