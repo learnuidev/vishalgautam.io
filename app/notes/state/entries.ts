@@ -12,8 +12,8 @@ export interface Entry {
 export const multiLinguqalLocalizationApp: Entry = {
   id: "35a40520-de73-4817-9482-b4780e20ef29",
   slug: "multilingual-localization-app",
-  title: "Multi Lingual Localization with NextJS, i18n-next & Myelin AI",
-  status: "unpublished",
+  title: "Multi Lingual Localization App with NextJS, i18n-next & Myelin AI",
+  status: "published",
   tags: ["ai", "programming", "multi-lingual"],
   description:
     "In this tutorial we will learn about translating your NextJS app into multiple languages using i18next and myelino ai.",
