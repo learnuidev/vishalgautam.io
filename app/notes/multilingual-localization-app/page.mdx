@@ -1,4 +1,5 @@
 import { EntryBanner } from "@/app/notes/components/entry-banner";
+import { CopyToClipboard } from "@/app/notes/components/copy-to-clipboard";
 import { multiLinguqalLocalizationApp } from "@/app/notes/state/entries";
 
 <EntryBanner entryItem={multiLinguqalLocalizationApp} />
@@ -17,6 +18,8 @@ npx create-next-app@latest
 
 ```
 
+<CopyToClipboard text="npx create-next-app@latest" />
+
 ```
 
 
@@ -26,7 +29,6 @@ npx create-next-app@latest
 ---
 
 ```
-
 
 
 ```
@@ -43,6 +45,8 @@ npx shadcn@latest init
 
 ```
 
+<CopyToClipboard text="npx shadcn@latest init" />
+
 ```
 
 
@@ -54,7 +58,6 @@ npx shadcn@latest init
 ```
 
 
-
 ```
 
 ## Step 3: Add i18next boilerplate code
@@ -64,14 +67,19 @@ Next lets add the i18n-next and friends into our app. We can use following comma
 
 ```
 
+
 npx myelino --add next-i18n
 
 
+
 ```
+
+<CopyToClipboard text="npx myelino --add next-i18n" />
 
 Running this will do the following:
 
 ```
+
 
 
 ```
@@ -86,10 +94,6 @@ Running this will do the following:
 ```
 
 Lets go over these two points in detail
-
-```
-
-```
 
 ## 1. Install the following dependencies:
 
@@ -172,6 +176,16 @@ export default function RootLayout({
 
 ```
 
+<CopyToClipboard
+  text={JSON.stringify(
+    {
+      title: "Welcome to the app",
+    },
+    null,
+    4
+  )}
+/>
+
 ---
 
 ```
@@ -252,6 +266,22 @@ Next we are going to create `myelin.config.json`
 
 ```
 
+<CopyToClipboard
+  text={JSON.stringify(
+    {
+      aiProvider: "deepseek",
+      aiModel: "deepseek-chat",
+      locale: {
+        location: "locales",
+        sourceLanguage: "en",
+        targetLanguages: ["es", "fr", "zh", "zh-TW", "en-US"],
+      },
+    },
+    null,
+    4
+  )}
+/>
+
 ## Step 2: Run Translate
 
 ```
@@ -261,9 +291,13 @@ Next we are going to create `myelin.config.json`
 ```
 
 ```
+
 > npx myelino --translate
 
+
 ```
+
+<CopyToClipboard text={"npx myelino --translate"} />
 
 ```
 
@@ -343,5 +377,7 @@ npx myelino --upsert i18next.d.ts
 
 
 ```
+
+<CopyToClipboard text={"npx myelino --upsert i18next.d.ts"} />
 
 This script will automatically generate types for you. Now if you try to fill in the keys, the options should be automatically populated for you. Thats it. If you made it this far, then great work!
