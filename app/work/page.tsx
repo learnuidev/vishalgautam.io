@@ -1,27 +1,26 @@
-import { Nothing } from "@/components/nothing";
+"use client";
 
-const workWithMe = {
-  title: "Work With Me",
-  description: `Whether you're interested in having me develop your next project or seeking guidance on your coding journey, you can book a monthly session with me or opt for a one-time consultation.`,
-};
+import { ComingSoon } from "@/components/coming-soon";
+import { useTranslation } from "@/libs/i18n-next/use-translation";
 
 export default function Work() {
+  const { t } = useTranslation("withWithMe");
   return (
     <div>
       <div className="mt-40">
         <div className="mx-auto max-w-xl mb-12 dark:mb-2 text-center">
           <h1 className="text-4xl mb-3 font-bold tracking-tight">
-            {workWithMe.title}
+            {t("title")}
           </h1>
 
           <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
-            {workWithMe.description}
+            {t("description")}
           </p>
         </div>
       </div>
 
       <section>
-        <Nothing message={"Coming Soon"} />
+        <ComingSoon />
       </section>
     </div>
   );

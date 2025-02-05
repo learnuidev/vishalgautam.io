@@ -1,4 +1,4 @@
-import { Nothing } from "@/components/nothing";
+import { ComingSoon } from "@/components/coming-soon";
 
 export default function Courses() {
   return (
@@ -6,9 +6,7 @@ export default function Courses() {
       <section className="mt-40">
         <h1 className="text-2xl font-bold mb-12 text-left">Courses</h1>
       </section>
-      <section>
-        <Nothing message={"Coming Soon"} />
-      </section>
+      <ComingSoon />
     </main>
   );
 }
