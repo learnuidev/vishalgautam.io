@@ -1,7 +1,31 @@
-import { projectsList } from "./constants/projects-list";
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "@/libs/i18n-next/use-translation";
 
 export default function Projects() {
+  const { t } = useTranslation(["projects", "common"]);
+  const projectsList = [
+    {
+      id: "myelin",
+      title: t("myelin.title"),
+      description: t("myelin.description"),
+      link: "https://www.myelin.dev",
+    },
+    {
+      id: "mandarino",
+      title: t("mandarino.title"),
+      description: t("mandarino.description"),
+      link: "https://www.mandarino.io",
+    },
+    // {
+    //   id: "dyno",
+    //   title: "Dyno",
+    //   description: "DynamoDB client from the future",
+    //   link: "https://www.dyno.im",
+    // },
+  ];
+
   return (
     <div className="mt-40">
       <h1 className="text-2xl font-bold mb-12">Projects</h1>{" "}
@@ -25,7 +49,7 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
               >
-                View
+                {t("common:view")}
               </Link>
             </div>
           );
