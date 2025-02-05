@@ -89,7 +89,7 @@ export const NavBar = () => {
   const [playMusic, { pause }] = useSound(musicUrl);
   const [playSwitch] = useSound(switchUrl);
 
-  const { t } = useTranslation("navbar");
+  const { t } = useTranslation("common");
 
   return (
     <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
