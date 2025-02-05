@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { MoveLeft } from "lucide-react";
 import { Entry } from "../state/entries";
+import { useTranslation } from "@/libs/i18n-next/use-translation";
 
 export const EntryBanner = ({ entryItem }: { entryItem: Entry }) => {
+  const { t } = useTranslation("notes");
   return (
     <section className="mt-40 mb-12">
       <Link
@@ -13,7 +15,7 @@ export const EntryBanner = ({ entryItem }: { entryItem: Entry }) => {
       >
         {" "}
         <MoveLeft size={16} />
-        <span> Back to Library</span>
+        <span> {t("backToNotes")}</span>
       </Link>
       <h1 className="text-2xl font-bold">{entryItem.title}</h1>
       <p className="text-gray-500">{entryItem.description}</p>
