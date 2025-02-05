@@ -11,11 +11,13 @@ export default function Library() {
     if (!filteredState) {
       return entries;
     }
-    return entries.filter((entry) => {
-      return JSON.stringify(entry)
-        ?.toLowerCase()
-        ?.includes(filteredState?.toLowerCase());
-    });
+    return entries
+      .filter((item) => item.status === "published")
+      .filter((entry) => {
+        return JSON.stringify(entry)
+          ?.toLowerCase()
+          ?.includes(filteredState?.toLowerCase());
+      });
   }, [filteredState]);
   return (
     <main>
