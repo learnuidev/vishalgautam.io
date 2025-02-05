@@ -3,7 +3,7 @@ import { multiLinguqalLocalizationApp } from "@/app/notes/state/entries";
 
 <EntryBanner entryItem={multiLinguqalLocalizationApp} />
 
-# Part A: Frontend Infra
+# Part A: Frontend
 
 ## Step 1: Create NextJS Project
 
@@ -227,7 +227,7 @@ export const Banner = () => {
 
 ```
 
-Alright, now we have the frontend, we are ready to start our translation infra pipeline with myelin
+Alright, now we have the frontend, we are ready to start our translation infra pipeline with [myelin](https://www.myelin.dev)
 
 ## Step 1: Create `myelin.config.json`
 
@@ -319,7 +319,7 @@ And thats it, you have built your own multi lingual app, chadcn style. Well done
 
 ```
 
-# Bonus: Automatic intellisense with typescript
+# Bonus: Automatic intellisense with TypeScript
 
 ```
 
@@ -333,44 +333,15 @@ If you noticed, when using `use-translate`, its not very optimal. We can improve
 
 ```
 
-First lets create `types/i18next.d.ts` file and import our translations like so
+Typically we do that by creating `types/i18next.d.ts` file and import our translations like. However, this is a manual process and can be time consuming. Luckily there is a cli from myelin :).
 
 ```
 
 
-```
-
-```
-
-import { i18nOptions } from "@/libs/i18n-next/i18n-config";
-import banner from "@/locales/en/banner.json";
-import common from "@/locales/en/common.json";
-
-declare module "i18next" {
-  interface CustomTypeOptions {
-    defaultNS: typeof i18nOptions.defaultNS;
-    resources: {
-      banner: typeof banner;
-      common: typeof common;
-    };
-  }
-}
+npx myelino --upsert i18next.d.ts
 
 
 
 ```
 
-Now if you try to fill in the keys, the options should be automatically populated for you. Thats it
-
-```
-
-
-```
-
-Links:
-
-```
-
-```
-
-- [Myelin AI](https://www.myelin.dev/)
+This script will automatically generate types for you. Now if you try to fill in the keys, the options should be automatically populated for you. Thats it. If you made it this far, then great work!
