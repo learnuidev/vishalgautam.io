@@ -5,9 +5,17 @@
     "location": "locales",
     "sourceLanguage": "en",
     "targetLanguages": [
-      "fr",
       "es",
-      "zh"
+      "fr",
+      "zh",
+      "zh-TW",
+      "ro",
+      "fa",
+      "ur",
+      "ko",
+      "ru",
+      "ar",
+      "hi"
     ]
   }
 }
