@@ -10,5 +10,7 @@
   "hi": "Hindi",
   "fa": "Farsi",
   "ar": "Árabe",
-  "ru": "Ruso"
+  "ru": "Ruso",
+  "en": "Inglés (Reino Unido)",
+  "en-US": "Inglés (Estados Unidos)"
 }
