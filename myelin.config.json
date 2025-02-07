@@ -17,5 +17,12 @@
       "ar",
       "hi"
     ]
-  }
+  },
+  "cloud": {
+    "provider": "aws",
+    "awsProfile": "yoserverless",
+    "awsRegion": "us-east-1"
+  },
+  "projectId": "f3304dc1-4709-4197-8bc7-9a05e04d5081",
+  "storageProvider": "dynamodb"
 }
