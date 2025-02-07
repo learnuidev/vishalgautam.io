@@ -23,6 +23,6 @@
     "awsProfile": "yoserverless",
     "awsRegion": "us-east-1"
   },
-  "projectId": "f3304dc1-4709-4197-8bc7-9a05e04d5081",
+  "projectId": "21374d41-e38f-4325-bdbc-bb3dd9a79a37",
   "storageProvider": "dynamodb"
 }
