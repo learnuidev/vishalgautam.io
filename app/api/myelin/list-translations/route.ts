@@ -7,6 +7,7 @@ export async function GET() {
 
     return Response.json(translations);
   } catch (err) {
+    return Response.json({ nodeEnv: process.env.NODE_ENV });
     throw new Error(process.env.NODE_ENV);
   }
 }

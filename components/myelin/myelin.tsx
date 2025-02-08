@@ -8,34 +8,65 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { XIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AnimatedLoadingText } from "../animated-loading-text";
 
 function getNamespaces(translations: any): string[] {
-  return [
-    ...new Set(
-      translations.map((item: any) => {
-        return item?.fileName;
-      })
-    ),
-  ] as string[];
+  if (Array.isArray(translations)) {
+    return [
+      ...new Set(
+        translations.map((item: any) => {
+          return item?.fileName;
+        })
+      ),
+    ] as string[];
+  }
+
+  return [];
 }
 
 export const Myelin = ({ className }: { className?: string }) => {
   const [tab, setTab] = useState("common.json");
 
-  const { data, isError } = useListTranslationsQuery({
+  const { data, isLoading } = useListTranslationsQuery({
     onSuccess: (data: any) => {
-      setTab(data?.[0]?.fileName);
+      if (!data?.nodeEnv) {
+        setTab(data?.[0]?.fileName);
+      }
     },
   });
 
   const nameSpaces = getNamespaces(data || []);
 
-  const filteredTranslations = useMemo(
-    () => data?.filter((translation: any) => translation?.fileName === tab),
-    [data, tab]
-  );
+  const filteredTranslations = useMemo(() => {
+    if (Array.isArray(data)) {
+      return data?.filter((translation: any) => translation?.fileName === tab);
+    }
+  }, [data, tab]);
 
-  if (isError) {
+  if (isLoading) {
+    return (
+      <div className="flex flex-col justify-center items-center mt-32">
+        <AnimatedLoadingText
+          className="text-xl font-light"
+          message={"Loading translations..."}
+        />
+      </div>
+    );
+  }
+
+  if (data?.nodeEnv === "development") {
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-3xl mt-32">Error</h1>
+
+        <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
+          Something went wrong
+        </p>
+      </div>
+    );
+  }
+
+  if (data?.nodeEnv === "production") {
     return (
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-3xl mt-32">Error</h1>
