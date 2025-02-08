@@ -72,7 +72,7 @@ export const Myelin = ({ className }: { className?: string }) => {
         <h1 className="text-3xl mt-32">Error</h1>
 
         <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
-          This is a developmental feature only. Sry
+          Coming soon. This is a developmental feature only for now.
         </p>
 
         <Link href="/" className="mt-8">
@@ -98,7 +98,11 @@ export const Myelin = ({ className }: { className?: string }) => {
             <TabsList className="space-x-4 rounded-full">
               {nameSpaces?.map((ns: string) => {
                 return (
-                  <TabsTrigger key={ns} value={ns}>
+                  <TabsTrigger
+                    className="rounded-full focus:outline-none border-transparent focus:border-transparent focus:ring-0 border-none focus:ring-0"
+                    key={ns}
+                    value={ns}
+                  >
                     {ns}
                   </TabsTrigger>
                 );
