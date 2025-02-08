@@ -1,7 +1,7 @@
 {
-  "mandarino.title": "Mandarină",
+  "projects.title": "Proiecte",
+  "mandarino.title": "Mandarino",
   "mandarino.description": "Aplicație de învățare a limbilor de nouă generație",
-  "myelin.title": "Myelină",
-  "myelin.description": "Infrastructură de traducere care generează bucurie",
-  "projects.title": "Proiecte"
+  "myelin.title": "Myelin",
+  "myelin.description": "Infra pentru traduceri care aduce bucurie"
 }

@@ -1,8 +1,9 @@
 {
-  "es": "Inglés (Reino Unido)",
-  "es-US": "Inglés (Estados Unidos)",
+  "en": "Inglés (Reino Unido)",
+  "en-US": "Inglés (EE. UU.)",
   "zh": "Chino (Continental)",
   "zh-TW": "Chino (Taiwán)",
+  "es": "Español",
   "fr": "Francés",
   "ko": "Coreano",
   "ro": "Rumano",
@@ -10,7 +11,5 @@
   "hi": "Hindi",
   "fa": "Farsi",
   "ar": "Árabe",
-  "ru": "Ruso",
-  "en": "Inglés (Reino Unido)",
-  "en-US": "Inglés (Estados Unidos)"
+  "ru": "Ruso"
 }

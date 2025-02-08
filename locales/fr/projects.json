@@ -1,7 +1,7 @@
 {
+  "projects.title": "Projets",
   "mandarino.title": "Mandarino",
   "mandarino.description": "Application d'apprentissage des langues de nouvelle génération",
   "myelin.title": "Myéline",
-  "myelin.description": "Infrastructure de traduction qui suscite la joie",
-  "projects.title": "Projets"
+  "myelin.description": "Infrastructure de traduction qui suscite de la joie"
 }

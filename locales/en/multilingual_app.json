@@ -25,5 +25,12 @@
   "stepSeven.title": "Step 7: Use the translations",
   "stepSeven.paragraphOne": "With custom types generated, we can use the custom useTranslation hook like so:",
   "stepSeven.paragraphTwo": "You'll notice type completion when typing namespaces. This is before we generated types in previous step.",
-  "stepSeven.paragraphThree": "We are done with frontend section. Now the fun part, multi lingual translations with Myelin AI."
+  "stepSeven.paragraphThree": "We are done with frontend section. Now the fun part, multi lingual translations with Myelin AI.",
+
+  "partTwo.title": "Part B: Multi Lingual Translation with Myelin AI",
+  "partTwo.intro": "intro",
+  "partTwo.intro.paragraphOne": "Alright, now we have the frontend, we are ready to start our translation infra pipeline with myelin.",
+  "partTwo.intro.paragraphTwo": "Myelin is an open source local first translation infrastructure, that makes it super easy to manage, sync and run multi language translations. First step in using is is to initialize it.",
+  "partTwo.intro.paragraphThree": "You will be asked to provide source translation, target translations and AI service provider of your choice. If you want you can even add custom ai provider. To keep things simple we are going to select openai.",
+  "partTwo.intro.paragraphFour": "            You will also need to get your api keys and saved it in .env file"
 }

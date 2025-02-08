@@ -201,34 +201,18 @@ export const Banner = () => {
 
         <hr />
 
-        <Header3 className="mt-16">
-          Part B: Multi Lingual Translation with Myelin AI
-        </Header3>
+        <Header3 className="mt-16">{t("partTwo.title")}</Header3>
 
         <SectionContainer>
-          <Header4>Intro</Header4>
+          <Header4>{t("partTwo.intro")}</Header4>
 
-          <Paragraph>
-            Alright, now we have the frontend, we are ready to start our
-            translation infra pipeline with myelin.
-          </Paragraph>
-          <Paragraph>
-            Myelin is an open source local first translation infrastructure,
-            that makes it super easy to manage, sync and run multi language
-            translations. First step in using is is to initialize it.
-          </Paragraph>
+          <Paragraph>{t("partTwo.intro.paragraphOne")}</Paragraph>
+          <Paragraph>{t("partTwo.intro.paragraphTwo")}</Paragraph>
 
           <CodeBlock codeBlock="npx myelino" />
 
-          <Paragraph>
-            You will be asked to provide source translation, target translations
-            and AI service provider of your choice. If you want you can even add
-            custom ai provider. To keep things simple we are going to select
-            openai.
-          </Paragraph>
-          <Paragraph>
-            You will also need to get your api keys and saved it in .env file
-          </Paragraph>
+          <Paragraph>{t("partTwo.intro.paragraphThree")}</Paragraph>
+          <Paragraph>{t("partTwo.intro.paragraphFour")}</Paragraph>
         </SectionContainer>
 
         <SectionContainer>
