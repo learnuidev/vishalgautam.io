@@ -1,11 +1,13 @@
+export const isClient = () => typeof window !== "undefined";
+
 export function setCookie(key: string, value: string) {
-  if (isClientSide()) {
+  if (isClient()) {
     document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}; Secure; SameSite=Lax; path=/`;
   }
 }
 
 export function getCookie(key: string) {
-  if (isClientSide()) {
+  if (isClient()) {
     const cookies = document.cookie ? document.cookie.split("; ") : [];
     for (let i = 0; i < cookies.length; i++) {
       const parts = cookies[i].split("=");
@@ -18,11 +20,3 @@ export function getCookie(key: string) {
     }
   }
 }
-
-export function removeCookie(key: string) {
-  if (isClientSide()) {
-    document.cookie = `${encodeURIComponent(key)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; SameSite=Lax; path=/`;
-  }
-}
-
-export const isClientSide = () => typeof window !== "undefined";

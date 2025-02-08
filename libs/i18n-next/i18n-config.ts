@@ -1,7 +1,8 @@
 import { FormatFunction } from "i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
+import myelinConfig from "@/myelin.config.json";
 
-const languagesList = {
+export const languagesList = {
   en: "English (UK)",
   "en-US": "English (US)",
   zh: "Chinese (Mainland)",
@@ -15,8 +16,20 @@ const languagesList = {
   fa: "Farsi",
   ar: "Arabic",
   ru: "Russian",
+  "ne-NP": "Nepali",
+
   // Add your supported locales here
 } as const;
+
+const displayLanguages = Object.fromEntries(
+  Object.entries(languagesList)?.filter((item) => {
+    const langId = item[0];
+    return (
+      langId === myelinConfig.locale.sourceLanguage ||
+      myelinConfig.locale.targetLanguages?.includes(langId)
+    );
+  })
+);
 
 export type Language = keyof typeof languagesList;
 
@@ -24,7 +37,7 @@ export const i18nConfig = {
   cookieName: "I18N_COOKIE",
   fallbackLanguage: "en",
   defaultNamespace: "common",
-  languages: Object.keys(languagesList) as Language[],
+  languages: Object.keys(displayLanguages) as Language[],
 };
 
 const customFormat: FormatFunction = (value, format) => {
