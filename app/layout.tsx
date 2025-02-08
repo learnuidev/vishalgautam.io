@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Alegreya, Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { NavBar } from "@/components/navbar";
 import { ClerkProvider } from "@/lib/clerk/clerk-provider";
 import { Footer } from "@/components/footer";
 import { I18NextHtmlProvider } from "@/libs/i18n-next/i18n-next-html-provider";
@@ -44,11 +43,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <NavBar />
-
-            <div className="flex-grow">
-              <div className="p-4 max-w-3xl mx-auto">{children}</div>
-            </div>
+            <div className="flex-grow">{children}</div>
 
             <TheDock>
               <ControlButtons />
