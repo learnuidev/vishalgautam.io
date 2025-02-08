@@ -12,5 +12,13 @@
   "stepFour.paragraphOne": "Ensuite, ajoutons i18n-next et amis dans notre application. Nous pouvons utiliser la commande suivante pour cela :",
   "stepFour.paragraphTwo": "Exécuter cela fera ce qui suit :",
   "stepFour.paragraphThree": "Installer la bibliothèque core i18next et des modules supplémentaires pour la détection de langue, le chaînage backend et la transformation des ressources.",
-  "stepFour.paragraphFour": "Mettre en œuvre diverses fonctions utilitaires et composants dans le répertoire libs/i18n-next, y compris la gestion des cookies, la détection de langue, la configuration, les fournisseurs et des hooks personnalisés pour la fonctionnalité de traduction."
+  "stepFour.paragraphFour": "Mettre en œuvre diverses fonctions utilitaires et composants dans le répertoire libs/i18n-next, y compris la gestion des cookies, la détection de langue, la configuration, les fournisseurs et des hooks personnalisés pour la fonctionnalité de traduction.",
+  "stepFive.title": "Étape 5 : Emballer layout.tsx",
+  "stepFive.paragraphOne": "Nous allons envelopper le composant de mise en page avec I18NextHtmlProvider.",
+  "stepSix.title": "Étape 6 : Générer des types",
+  "stepSix.paragraph": "Avant de pouvoir commencer à utiliser les traductions, générons des types. Cela nous aidera avec la complétion des types lors de l'utilisation du hook useTranslation. Nous pouvons exécuter npx myelino upsert et sélectionner i18next.d.ts. Cela va générer des types personnalisés dans le répertoire types.",
+  "stepSeven.title": "Étape 7 : Utilisez les traductions",
+  "stepSeven.paragraphOne": "Avec les types personnalisés générés, nous pouvons utiliser le hook useTranslation personnalisé comme ceci :",
+  "stepSeven.paragraphTwo": "Vous remarquerez la complétion de type lorsque vous tapez des espaces de noms. C'est avant que nous générions des types à l'étape précédente.",
+  "stepSeven.paragraphThree": "Nous avons terminé la section frontend. Maintenant, la partie amusante, les traductions multilingues avec Myelin AI."
 }

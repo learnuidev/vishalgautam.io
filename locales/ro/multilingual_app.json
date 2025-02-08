@@ -12,5 +12,13 @@
   "stepFour.paragraphOne": "Următorul pas este să adăugăm i18n-next și prietenii în aplicația noastră. Putem folosi următoarea comandă pentru a face acest lucru:",
   "stepFour.paragraphTwo": "Executarea acestuia va face următoarele:",
   "stepFour.paragraphThree": "Instalarea bibliotecii de bază i18next și a modulelor suplimentare pentru detectarea limbii, lanțurile de backend și transformarea resurselor.",
-  "stepFour.paragraphFour": "Implementarea diferitelor funcții și componente utilitare în directorul libs/i18n-next, inclusiv gestionarea cookie-urilor, detectarea limbii, configurarea, furnizorii și hook-urile personalizate pentru funcționalitatea de traducere."
+  "stepFour.paragraphFour": "Implementarea diferitelor funcții și componente utilitare în directorul libs/i18n-next, inclusiv gestionarea cookie-urilor, detectarea limbii, configurarea, furnizorii și hook-urile personalizate pentru funcționalitatea de traducere.",
+  "stepFive.title": "Pasul 5: Împachetează layout.tsx",
+  "stepFive.paragraphOne": "Vom împacheta componenta layout cu I18NextHtmlProvider",
+  "stepSix.title": "Pasul 6: Generați tipuri",
+  "stepSix.paragraph": "Înainte să putem începe să folosim traducerile, să generăm tipuri. Acest lucru ne va ajuta cu completarea tipurilor atunci când folosim hook-ul useTranslation. Putem rula npx myelino upsert și selecta i18next.d.ts. Aceasta va genera tipuri personalizate în directorul de tipuri.",
+  "stepSeven.title": "Pasul 7: Folosește traducerile",
+  "stepSeven.paragraphOne": "Cu tipurile personalizate generate, putem folosi hook-ul personalizat useTranslation așa:",
+  "stepSeven.paragraphTwo": "Vei observa completarea tipului atunci când scrii spațiile de nume. Aceasta este înainte de a genera tipurile în pasul anterior.",
+  "stepSeven.paragraphThree": "Am terminat cu secțiunea frontend. Acum partea distractivă, traduceri multilingve cu Myelin AI."
 }

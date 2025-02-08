@@ -9,9 +9,11 @@ import { useTranslation } from "@/libs/i18n-next/use-translation";
 const CodeBlock = ({
   title,
   codeBlock,
+  showCopyToClipboard = true,
 }: {
   title?: string;
   codeBlock: string;
+  showCopyToClipboard?: boolean;
 }) => {
   return (
     <div
@@ -29,11 +31,9 @@ const CodeBlock = ({
               </span>
             </pre>
           </code>
-          <CopyToClipboard text={codeBlock} />
+          {showCopyToClipboard && <CopyToClipboard text={codeBlock} />}
         </div>
       </div>
-
-      {/* <CopyToClipBoardButton text={codeBlock} /> */}
     </div>
   );
 };
@@ -142,13 +142,12 @@ export default function MultlingualLocalizationApp() {
           <Paragraph>{t("stepFour.paragraphFour")}</Paragraph>
         </SectionContainer>
         <SectionContainer>
-          <Header4>Step 5: Wrap layout.tsx</Header4>
+          <Header4>{t("stepFive.title")}</Header4>
 
-          <Paragraph>
-            We are going to wrap layout component with I18NextHtmlProvider
-          </Paragraph>
+          <Paragraph>{t("stepFive.paragraphOne")}</Paragraph>
 
           <CodeBlock
+            showCopyToClipboard={false}
             codeBlock={`export default function RootLayout({
   children,
 }: Readonly<{
@@ -164,23 +163,19 @@ export default function MultlingualLocalizationApp() {
         </SectionContainer>
 
         <SectionContainer>
-          <Header4>Step 7: Generate types</Header4>
+          <Header4>{t("stepSix.title")}</Header4>
 
-          <Paragraph>
-            {`Before we can start using the translations, let's generate types. This will help us with type completion when using the useTranslation hook. We can run npx myelino upsert and select i18next.d.ts. This is going to generate a custom types under types directory.`}
-          </Paragraph>
+          <Paragraph>{t("stepSix.paragraph")}</Paragraph>
 
           <CodeBlock codeBlock={`npx myelino upsert i18next.d.ts`} />
         </SectionContainer>
         <SectionContainer>
-          <Header4>Step 8: Use the translations</Header4>
+          <Header4>{t("stepSeven.title")}</Header4>
 
-          <Paragraph>
-            With custom types generated, we can use the custom useTranslation
-            hook like so
-          </Paragraph>
+          <Paragraph>{t("stepSeven.paragraphOne")}</Paragraph>
 
           <CodeBlock
+            showCopyToClipboard={false}
             codeBlock={`"use client";
 
 import { Button } from "@/components/ui/button";
@@ -200,12 +195,8 @@ export const Banner = () => {
 };`}
           />
 
-          <Paragraph>
-            {`You'll notice type completion when typing namespaces. This is before we generated types in previous step.`}
-          </Paragraph>
-          <Paragraph>
-            {`We are done with frontend section. Now the fun part, multi lingual translations.`}
-          </Paragraph>
+          <Paragraph>{t("stepSeven.paragraphTwo")}</Paragraph>
+          <Paragraph>{t("stepSeven.paragraphThree")}</Paragraph>
         </SectionContainer>
 
         <hr />

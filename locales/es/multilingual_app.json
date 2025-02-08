@@ -12,5 +12,13 @@
   "stepFour.paragraphOne": "A continuación, agreguemos i18n-next y sus complementos a nuestra aplicación. Podemos usar el siguiente comando para hacerlo:",
   "stepFour.paragraphTwo": "Ejecutar esto hará lo siguiente:",
   "stepFour.paragraphThree": "Instalar la biblioteca principal de i18next y módulos adicionales para detección de idioma, encadenamiento de backend y transformación de recursos.",
-  "stepFour.paragraphFour": "Implementar varias funciones utilitarias y componentes en el directorio libs/i18n-next, incluyendo gestión de cookies, detección de idioma, configuración, proveedores y ganchos personalizados para la funcionalidad de traducción."
+  "stepFour.paragraphFour": "Implementar varias funciones utilitarias y componentes en el directorio libs/i18n-next, incluyendo gestión de cookies, detección de idioma, configuración, proveedores y ganchos personalizados para la funcionalidad de traducción.",
+  "stepFive.title": "Paso 5: Envuelve layout.tsx",
+  "stepFive.paragraphOne": "Vamos a envolver el componente de layout con I18NextHtmlProvider.",
+  "stepSix.title": "Paso 6: Generar tipos",
+  "stepSix.paragraph": "Antes de que podamos comenzar a usar las traducciones, generemos tipos. Esto nos ayudará con la finalización de tipos al usar el hook useTranslation. Podemos ejecutar npx myelino upsert y seleccionar i18next.d.ts. Esto generará tipos personalizados en el directorio de tipos.",
+  "stepSeven.title": "Paso 7: Usa las traducciones",
+  "stepSeven.paragraphOne": "Con los tipos personalizados generados, podemos usar el hook de useTranslation personalizado así:",
+  "stepSeven.paragraphTwo": "Notarás la finalización del tipo al escribir los espacios de nombres. Esto es antes de que generamos tipos en el paso anterior.",
+  "stepSeven.paragraphThree": "Hemos terminado con la sección del frontend. Ahora la parte divertida, las traducciones multilingües con Myelin AI."
 }

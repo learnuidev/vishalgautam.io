@@ -12,5 +12,13 @@
   "stepFour.paragraphOne": "接下來，讓我們將 i18n-next 及其相關工具添加到我們的應用程式中。我們可以使用以下命令來執行此操作：",
   "stepFour.paragraphTwo": "執行此操作將進行以下操作：",
   "stepFour.paragraphThree": "安裝核心 i18next 庫及額外的模組，用於語言檢測、後端鏈接和資源轉換。",
-  "stepFour.paragraphFour": "在 libs/i18n-next 目錄中實現各種實用程式函數和組件，包括 cookie 管理、語言檢測、配置、提供者和翻譯功能的自定義掛鉤。"
+  "stepFour.paragraphFour": "在 libs/i18n-next 目錄中實現各種實用程式函數和組件，包括 cookie 管理、語言檢測、配置、提供者和翻譯功能的自定義掛鉤。",
+  "stepFive.title": "步驟 5：包裹 layout.tsx",
+  "stepFive.paragraphOne": "我們將使用 I18NextHtmlProvider 包裹 layout 元件。",
+  "stepSix.title": "步驟 6：生成類型",
+  "stepSix.paragraph": "在我們開始使用翻譯之前，讓我們生成類型。這將幫助我們在使用 useTranslation 鉤子時完成類型補全。我們可以運行 npx myelino upsert 並選擇 i18next.d.ts。這將在類型目錄下生成自定義類型。",
+  "stepSeven.title": "步驟 7：使用翻譯",
+  "stepSeven.paragraphOne": "生成自定義類型後，我們可以這樣使用自定義的 useTranslation 鉤子：",
+  "stepSeven.paragraphTwo": "在輸入命名空間時，您會注意到類型補全。這是在我們在前一步生成類型之前。",
+  "stepSeven.paragraphThree": "前端部分已經完成。現在是有趣的部分，使用 Myelin AI 進行多語言翻譯。"
 }

@@ -12,5 +12,13 @@
   "stepFour.paragraphOne": "다음으로, 우리의 앱에 i18next와 관련 라이브러리를 추가해 보겠습니다. 다음 명령어를 사용할 수 있습니다:",
   "stepFour.paragraphTwo": "이를 실행하면 다음과 같은 작업이 이루어집니다:",
   "stepFour.paragraphThree": "핵심 i18next 라이브러리와 언어 감지, 백엔드 체이닝, 리소스 변환을 위한 추가 모듈을 설치합니다.",
-  "stepFour.paragraphFour": "libs/i18next 디렉토리에 쿠키 관리, 언어 감지, 구성, 프로바이더 및 번역 기능을 위한 사용자 지정 훅을 포함한 다양한 유틸리티 함수 및 컴포넌트를 구현합니다."
+  "stepFour.paragraphFour": "libs/i18next 디렉토리에 쿠키 관리, 언어 감지, 구성, 프로바이더 및 번역 기능을 위한 사용자 지정 훅을 포함한 다양한 유틸리티 함수 및 컴포넌트를 구현합니다.",
+  "stepFive.title": "5단계: layout.tsx 감싸기",
+  "stepFive.paragraphOne": "I18NextHtmlProvider로 layout 구성 요소를 감쌀 것입니다.",
+  "stepSix.title": "6단계: 타입 생성",
+  "stepSix.paragraph": "번역을 사용하기 전에 타입을 생성해 봅시다. 이는 useTranslation 훅을 사용할 때 타입 완성에 도움이 될 것입니다. npx myelino upsert를 실행하고 i18next.d.ts를 선택할 수 있습니다. 이렇게 하면 types 디렉토리에 사용자 정의 타입이 생성됩니다.",
+  "stepSeven.title": "7단계: 번역 사용",
+  "stepSeven.paragraphOne": "생성된 커스텀 타입을 사용하여 커스텀 useTranslation 훅을 다음과 같이 사용할 수 있습니다:",
+  "stepSeven.paragraphTwo": "네임스페이스를 입력할 때 타입 완성이 표시됩니다. 이는 이전 단계에서 타입을 생성하기 전에 발생합니다.",
+  "stepSeven.paragraphThree": "프론트엔드 섹션은 완료되었습니다. 이제 재미있는 부분, Myelin AI를 사용한 다국어 번역입니다."
 }

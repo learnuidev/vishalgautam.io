@@ -9,9 +9,21 @@
   "stepTwo.paragraphOne": "Next, lets add chadcn into our project. Myelin is heavily inspired from chadcn and uses a lot of its primities as a building blocks to create custom components such as language-switcher",
   "stepThree.title": "Step 3: Add locales",
   "stepThree.paragraphOne": "Next, lets add locales into our application. We are going to create a single namespaced locale called common.json inside locales/en directory. Myelin supports both namespaced and non-namespaced locales. But I highly encourage you to stick to namespaced locales.",
+
   "stepFour.title": "Step 4: Add i18next boilerplate code",
   "stepFour.paragraphOne": "Next lets add the i18n-next and friends into our app. We can use the following command to do so:",
   "stepFour.paragraphTwo": "Running this will do the following:",
   "stepFour.paragraphThree": "Install core i18next library and additional modules for language detection, backend chaining, and resource transformation.",
-  "stepFour.paragraphFour": "Implement various utility functions and components in the libs/i18n-next directory, including cookie management, language detection, configuration, providers, and custom hooks for translation functionality."
+  "stepFour.paragraphFour": "Implement various utility functions and components in the libs/i18n-next directory, including cookie management, language detection, configuration, providers, and custom hooks for translation functionality.",
+
+  "stepFive.title": "Step 5: Wrap layout.tsx",
+  "stepFive.paragraphOne": "We are going to wrap layout component with I18NextHtmlProvider",
+
+  "stepSix.title": "Step 6: Generate types",
+  "stepSix.paragraph": "Before we can start using the translations, let's generate types. This will help us with type completion when using the useTranslation hook. We can run npx myelino upsert and select i18next.d.ts. This is going to generate a custom types under types directory.",
+
+  "stepSeven.title": "Step 7: Use the translations",
+  "stepSeven.paragraphOne": "With custom types generated, we can use the custom useTranslation hook like so:",
+  "stepSeven.paragraphTwo": "You'll notice type completion when typing namespaces. This is before we generated types in previous step.",
+  "stepSeven.paragraphThree": "We are done with frontend section. Now the fun part, multi lingual translations with Myelin AI."
 }
