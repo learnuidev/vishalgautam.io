@@ -1,0 +1,16 @@
+{
+  "blog.title": "Aplicación Multilingüe con NextJS, i18next y Myelin AI",
+  "blog.description": "En este tutorial aprenderemos a traducir tu aplicación NextJS a múltiples idiomas utilizando i18next y myelin ai.",
+  "titleOne": "Parte A: Frontend",
+  "stepOne.title": "Paso 1: Crear Proyecto NextJS",
+  "stepOne.paragraphOne": "Ejecutaremos este comando para iniciar un nuevo proyecto de Next.js.",
+  "stepTwo.title": "Paso 2: Agregar chadcn",
+  "stepTwo.paragraphOne": "A continuación, agreguemos chadcn a nuestro proyecto. Myelin está fuertemente inspirado en chadcn y utiliza muchos de sus componentes primitivos como bloques de construcción para crear componentes personalizados como el cambiador de idioma.",
+  "stepThree.title": "Paso 3: Agregar locales",
+  "stepThree.paragraphOne": "A continuación, agreguemos locales a nuestra aplicación. Vamos a crear un único locale con un espacio de nombres llamado common.json dentro del directorio locales/en. Myelin admite locales tanto con espacio de nombres como sin él. Pero te animo encarecidamente a que te adhieras a los locales con espacio de nombres.",
+  "stepFour.title": "Paso 4: Agrega el código base de i18next",
+  "stepFour.paragraphOne": "A continuación, agreguemos i18n-next y sus complementos a nuestra aplicación. Podemos usar el siguiente comando para hacerlo:",
+  "stepFour.paragraphTwo": "Ejecutar esto hará lo siguiente:",
+  "stepFour.paragraphThree": "Instalar la biblioteca principal de i18next y módulos adicionales para detección de idioma, encadenamiento de backend y transformación de recursos.",
+  "stepFour.paragraphFour": "Implementar varias funciones utilitarias y componentes en el directorio libs/i18n-next, incluyendo gestión de cookies, detección de idioma, configuración, proveedores y ganchos personalizados para la funcionalidad de traducción."
+}

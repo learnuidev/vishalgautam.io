@@ -9,10 +9,10 @@ export interface Entry {
   blog?: string;
 }
 
-export const multiLinguqalLocalizationApp: Entry = {
+export const multiLingualApp: Entry = {
   id: "35a40520-de73-4817-9482-b4780e20ef29",
   slug: "multilingual-localization-app",
-  title: "Multi Lingual Localization App with NextJS, i18n-next & Myelin AI",
+  title: "Multi Lingual App with NextJS, i18next & Myelin AI",
   status: "published",
   tags: ["ai", "programming", "multi-lingual"],
   description:
@@ -42,7 +42,7 @@ export const translationApp: Entry = {
 };
 
 export const entries: Entry[] = [
-  multiLinguqalLocalizationApp,
+  multiLingualApp,
   ragApp,
   translationApp,
 ]?.filter((item) => item?.status === "published");

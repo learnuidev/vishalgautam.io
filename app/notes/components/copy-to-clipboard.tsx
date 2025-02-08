@@ -6,7 +6,7 @@ import { useState } from "react";
 export const CopyToClipboard = ({ text }: { text: string }) => {
   const [showSucces, setShowSuccess] = useState(false);
   return (
-    <div className="flex justify-end mb-4">
+    <div className="flex justify-end">
       <button
         className="hover:text-gray-400 transition-all"
         onClick={() => {
@@ -15,7 +15,7 @@ export const CopyToClipboard = ({ text }: { text: string }) => {
 
             setTimeout(() => {
               setShowSuccess(false);
-            }, 2000);
+            }, 1200);
           });
         }}
       >

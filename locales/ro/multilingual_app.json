@@ -1,0 +1,16 @@
+{
+  "blog.title": "Aplicație Multilingvă cu NextJS, i18next și Myelin AI",
+  "blog.description": "În acest tutorial vom învăța cum să traducem aplicația dvs. NextJS în mai multe limbi folosind i18next și Myelin AI.",
+  "titleOne": "Partea A: Frontend",
+  "stepOne.title": "Pasul 1: Creează proiect NextJS",
+  "stepOne.paragraphOne": "Vom rula această comandă pentru a începe un nou proiect Next.js.",
+  "stepTwo.title": "Pasul 2: Adaugă chadcn",
+  "stepTwo.paragraphOne": "Urmează să adăugăm chadcn în proiectul nostru. Myelin este puternic inspirat de chadcn și folosește multe dintre primitivile sale ca blocuri de construcție pentru a crea componente personalizate precum selectorul de limbă.",
+  "stepThree.title": "Pasul 3: Adăugați locale",
+  "stepThree.paragraphOne": "Următorul pas este să adăugăm locale în aplicația noastră. Vom crea un singur locale cu namespace numit common.json în directorul locales/en. Myelin suportă atât locale cu namespace, cât și fără namespace. Dar vă încurajez cu tărie să rămâneți la locale cu namespace.",
+  "stepFour.title": "Pasul 4: Adăugați codul boilerplate i18next",
+  "stepFour.paragraphOne": "Următorul pas este să adăugăm i18n-next și prietenii în aplicația noastră. Putem folosi următoarea comandă pentru a face acest lucru:",
+  "stepFour.paragraphTwo": "Executarea acestuia va face următoarele:",
+  "stepFour.paragraphThree": "Instalarea bibliotecii de bază i18next și a modulelor suplimentare pentru detectarea limbii, lanțurile de backend și transformarea resurselor.",
+  "stepFour.paragraphFour": "Implementarea diferitelor funcții și componente utilitare în directorul libs/i18n-next, inclusiv gestionarea cookie-urilor, detectarea limbii, configurarea, furnizorii și hook-urile personalizate pentru funcționalitatea de traducere."
+}

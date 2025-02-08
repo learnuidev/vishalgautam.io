@@ -33,14 +33,14 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <I18NextHtmlProvider>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased flex flex-col h-screen`}
         >
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} ${inter.className}  antialiased flex flex-col h-screen`}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
           >
             <NavBar />
 
@@ -49,8 +49,8 @@ export default function RootLayout({
             </div>
 
             <Footer />
-          </body>
-        </ThemeProvider>
+          </ThemeProvider>
+        </body>
       </I18NextHtmlProvider>
     </ClerkProvider>
   );

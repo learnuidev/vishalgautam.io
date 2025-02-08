@@ -16,7 +16,6 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { Button } from "./ui/button";
 import { useState } from "react";
 import { useTranslation } from "@/libs/i18n-next/use-translation";
 import { LanguageSwitcher } from "@/libs/i18n-next/language-switcher";
@@ -130,9 +129,9 @@ export const NavBar = () => {
             {theme === "light" ? <Moon /> : <Sun />}
           </button>
           <SignedOut>
-            <Button variant="outline">
+            <span>
               <SignInButton>{t("signIn")}</SignInButton>
-            </Button>
+            </span>
           </SignedOut>
           <SignedIn>
             <UserButton />

@@ -1,0 +1,16 @@
+{
+  "blog.title": "多語言應用程式與 NextJS、i18next 及 Myelin AI",
+  "blog.description": "在本教程中，我們將學習如何使用 i18next 和 Myelin AI 將您的 NextJS 應用程式翻譯成多種語言。",
+  "titleOne": "第一部分：前端",
+  "stepOne.title": "第 1 步：建立 NextJS 專案",
+  "stepOne.paragraphOne": "我們將執行此命令來啟動一個新的 Next.js 專案",
+  "stepTwo.title": "步驟 2：加入 chadcn",
+  "stepTwo.paragraphOne": "接下來，讓我們將 chadcn 添加到我們的專案中。Myelin 受到 chadcn 的啟發，使用了很多它的基本元素作為創建自定義組件（例如語言切換器）的基礎。",
+  "stepThree.title": "步驟 3：添加區域設定",
+  "stepThree.paragraphOne": "接下來，讓我們在應用程式中添加區域設定。我們將在 locales/en 目錄中創建一個名為 common.json 的命名空間區域設定。Myelin 支援命名空間和非命名空間的區域設定。但我強烈建議您堅持使用命名空間的區域設定。",
+  "stepFour.title": "第 4 步：添加 i18next 標準程式碼",
+  "stepFour.paragraphOne": "接下來，讓我們將 i18n-next 及其相關工具添加到我們的應用程式中。我們可以使用以下命令來執行此操作：",
+  "stepFour.paragraphTwo": "執行此操作將進行以下操作：",
+  "stepFour.paragraphThree": "安裝核心 i18next 庫及額外的模組，用於語言檢測、後端鏈接和資源轉換。",
+  "stepFour.paragraphFour": "在 libs/i18n-next 目錄中實現各種實用程式函數和組件，包括 cookie 管理、語言檢測、配置、提供者和翻譯功能的自定義掛鉤。"
+}
