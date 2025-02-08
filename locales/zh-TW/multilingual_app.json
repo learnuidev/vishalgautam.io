@@ -26,5 +26,11 @@
   "partTwo.intro.paragraphOne": "好吧，現在我們有了前端，我們準備開始使用 Myelin 建立翻譯基礎設施管道。",
   "partTwo.intro.paragraphTwo": "Myelin 是一個開源的本地優先翻譯基礎設施，使得管理、同步和運行多語言翻譯變得非常簡單。使用它的第一步是初始化它。",
   "partTwo.intro.paragraphThree": "您將被要求提供源翻譯、目標翻譯以及您選擇的 AI 服務提供者。如果您願意，您甚至可以添加自定義的 AI 提供者。為了簡化流程，我們將選擇 openai。",
-  "partTwo.intro.paragraphFour": "您還需要獲取 API 金鑰並將其保存在 .env 文件中。"
+  "partTwo.intro.paragraphFour": "您還需要獲取 API 金鑰並將其保存在 .env 文件中。",
+  "partTwo.translate.title": "翻譯",
+  "partTwo.translate.paragraphOne": "現在我們準備好執行翻譯流程。我們可以使用以下命令來完成這個操作",
+  "partTwo.translate.paragraphTwo": "當你運行這個命令時，Myelin 將加載你的源 JSON 文件（例如，locales/en/common.json），識別任何新的或更新的翻譯字符串，並生成你指定的目標語言的翻譯，並創建或更新相關的目標語言 JSON 命名空間文件（例如，locales/fr/common.json、locales/es/common.json、locales/zh/common.json）。",
+  "partTwo.translate.paragraphThree": "要檢查它是否真的在工作，我們可以導入語言切換組件。",
+  "partTwo.translate.note": "要檢查它是否真的在工作，我們可以導入語言切換組件。",
+  "conclusion": "就這樣，你已經按照 chadcn 的風格構建了自己的多語言應用程序。幹得好！"
 }

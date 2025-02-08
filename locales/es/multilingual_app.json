@@ -26,5 +26,11 @@
   "partTwo.intro.paragraphOne": "Bien, ahora tenemos el frontend, estamos listos para comenzar nuestra infraestructura de traducción con myelin.",
   "partTwo.intro.paragraphTwo": "Myelin es una infraestructura de traducción de código abierto y local, que facilita enormemente la gestión, sincronización y ejecución de traducciones en múltiples idiomas. El primer paso para usarlo es inicializarlo.",
   "partTwo.intro.paragraphThree": "Se te pedirá que proporciones la traducción fuente, las traducciones de destino y el proveedor de servicios de IA de tu elección. Si lo deseas, incluso puedes añadir un proveedor de IA personalizado. Para mantener las cosas simples, seleccionaremos openai.",
-  "partTwo.intro.paragraphFour": "También necesitarás obtener tus claves API y guardarlas en el archivo .env."
+  "partTwo.intro.paragraphFour": "También necesitarás obtener tus claves API y guardarlas en el archivo .env.",
+  "partTwo.translate.title": "Traducir",
+  "partTwo.translate.paragraphOne": "Ahora estamos listos para ejecutar la tubería de traducción. Podemos hacerlo con el siguiente comando.",
+  "partTwo.translate.paragraphTwo": "Cuando ejecutas este comando, Myelin carga tus archivos JSON de origen (por ejemplo, locales/en/common.json), identifica cualquier cadena de traducción nueva o actualizada, produce traducciones para los idiomas de destino que especificaste y crea o actualiza los archivos JSON de idioma de destino con nombres de espacio relevantes (por ejemplo, locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
+  "partTwo.translate.paragraphThree": "Para comprobar si realmente está funcionando, podemos importar el componente de cambio de idioma.",
+  "partTwo.translate.note": "Para comprobar si realmente está funcionando, podemos importar el componente de cambio de idioma.",
+  "conclusion": "Y eso es todo, has construido tu propia aplicación multilingüe, al estilo chadcn. ¡Bien hecho!"
 }

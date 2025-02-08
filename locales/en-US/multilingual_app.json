@@ -26,5 +26,11 @@
   "partTwo.intro.paragraphOne": "Alright, now we have the frontend, we are ready to start our translation infrastructure pipeline with Myelin.",
   "partTwo.intro.paragraphTwo": "Myelin is an open source local-first translation infrastructure that makes it super easy to manage, sync, and run multi-language translations. The first step in using it is to initialize it.",
   "partTwo.intro.paragraphThree": "You will be asked to provide source translation, target translations, and an AI service provider of your choice. If you want, you can even add a custom AI provider. To keep things simple, we are going to select OpenAI.",
-  "partTwo.intro.paragraphFour": "You will also need to get your API keys and save them in the .env file."
+  "partTwo.intro.paragraphFour": "You will also need to get your API keys and save them in the .env file.",
+  "partTwo.translate.title": "Translate",
+  "partTwo.translate.paragraphOne": "Now we are ready to run the translation pipeline. We can do that with the following command.",
+  "partTwo.translate.paragraphTwo": "When you run this command, Myelin loads your source JSON files (e.g., locales/en/common.json), identifies any new or updated translation strings, produces translations for your specified target languages, and creates or updates the relevant target language JSON namespaced files (e.g., locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
+  "partTwo.translate.paragraphThree": "To check if it is actually working, we can import the language-switcher component.",
+  "partTwo.translate.note": "To check if it is actually working, we can import the language-switcher component.",
+  "conclusion": "And that's it, you have built your own multilingual app, Chadcn style. Well done!"
 }

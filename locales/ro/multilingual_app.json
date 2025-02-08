@@ -26,5 +26,11 @@
   "partTwo.intro.paragraphOne": "Bine, acum avem frontendul, suntem gata să începem infrastructura de traducere cu Myelin.",
   "partTwo.intro.paragraphTwo": "Myelin este o infrastructură de traducere open source, cu prioritate locală, care face extrem de ușor să gestionezi, sincronizezi și rulezi traduceri în mai multe limbi. Primul pas în utilizarea acestuia este să-l inițializezi.",
   "partTwo.intro.paragraphThree": "Vei fi întrebat să oferi traducerea sursă, traducerile țintă și furnizorul de servicii AI ales de tine. Dacă dorești, poți chiar să adaugi un furnizor de AI personalizat. Pentru a păstra lucrurile simple, vom selecta openai.",
-  "partTwo.intro.paragraphFour": "De asemenea, va trebui să obții cheile tale API și să le salvezi în fișierul .env."
+  "partTwo.intro.paragraphFour": "De asemenea, va trebui să obții cheile tale API și să le salvezi în fișierul .env.",
+  "partTwo.translate.title": "Traducere",
+  "partTwo.translate.paragraphOne": "Acum suntem gata să rulăm procesul de traducere. Putem face asta cu următoarea comandă",
+  "partTwo.translate.paragraphTwo": "Când rulezi această comandă, Myelin încarcă fișierele tale JSON sursă (de exemplu, locales/en/common.json), identifică orice șiruri de traducere noi sau actualizate, produce traduceri pentru limbile țintă specificate și creează sau actualizează fișierele JSON corespunzătoare limbii țintă (de exemplu, locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
+  "partTwo.translate.paragraphThree": "Pentru a verifica dacă funcționează de fapt, putem importa componenta de comutare a limbii.",
+  "partTwo.translate.note": "Pentru a verifica dacă funcționează de fapt, putem importa componenta de comutare a limbii.",
+  "conclusion": "Și asta e tot, ai construit propria ta aplicație multilingvă, în stil chadcn. Bravo!"
 }

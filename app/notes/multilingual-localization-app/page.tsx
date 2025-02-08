@@ -216,41 +216,25 @@ export const Banner = () => {
         </SectionContainer>
 
         <SectionContainer>
-          <Header4>Translate</Header4>
+          <Header4>{t("partTwo.translate.title")}</Header4>
 
-          <Paragraph>
-            {" "}
-            Now we are ready to run the translation pipeline. We can do that
-            with the following command
-          </Paragraph>
+          <Paragraph>{t("partTwo.translate.paragraphOne")}</Paragraph>
 
           <CodeBlock codeBlock="npx myelino translate" />
 
           <Paragraph className="mb-12">
-            When you run this command, Myelin loads your source JSON files
-            (e.g., locales/en/common.json), identifies any new or updated
-            translation strings, produces translations for your specified target
-            languages, and creates or updates the relevant target language JSON
-            namespaced files (e.g., locales/fr/common.json,
-            locales/es/common.json, locales/zh/common.json).
+            {t("partTwo.translate.paragraphTwo")}
           </Paragraph>
           <Paragraph className="">
-            To check if it is actually working, we can import language-switcher
-            component.
+            {t("partTwo.intro.paragraphThree")}
           </Paragraph>
 
-          <Paragraph className="mt-12">
-            Note: language-switcher component depends on two chadcn components:
-            dropdown-menu and button. You can install using this command
-          </Paragraph>
+          <Paragraph className="mt-12">{t("partTwo.translate.note")}</Paragraph>
 
           <CodeBlock codeBlock="npx shadcn@latest add dropdown-menu button" />
         </SectionContainer>
 
-        <Paragraph className="">
-          And thats it, you have built your own multi lingual app, chadcn style.
-          Well done!
-        </Paragraph>
+        <Paragraph className="">{t("conclusion")}</Paragraph>
       </div>
     </div>
   );

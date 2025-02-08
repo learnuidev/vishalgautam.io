@@ -26,5 +26,11 @@
   "partTwo.intro.paragraphOne": "좋습니다. 이제 프론트엔드가 준비되었으니 Myelin을 사용하여 번역 인프라 파이프라인을 시작할 준비가 되었습니다.",
   "partTwo.intro.paragraphTwo": "Myelin은 초간단하게 다국어 번역을 관리, 동기화 및 실행할 수 있는 오픈 소스 로컬 우선 번역 인프라입니다. 사용하기 위한 첫 번째 단계는 초기화하는 것입니다.",
   "partTwo.intro.paragraphThree": "원하는 경우, 소스 번역, 대상 번역 및 원하는 AI 서비스 제공자를 제공하라는 요청을 받을 것입니다. 원하시면 사용자 정의 AI 제공자를 추가할 수도 있습니다. 간단하게 하기 위해 openai를 선택할 것입니다.",
-  "partTwo.intro.paragraphFour": "API 키를 받아서 .env 파일에 저장해야 합니다."
+  "partTwo.intro.paragraphFour": "API 키를 받아서 .env 파일에 저장해야 합니다.",
+  "partTwo.translate.title": "번역",
+  "partTwo.translate.paragraphOne": "이제 번역 파이프라인을 실행할 준비가 되었습니다. 다음 명령어로 할 수 있습니다.",
+  "partTwo.translate.paragraphTwo": "이 명령을 실행하면 Myelin이 소스 JSON 파일(예: locales/en/common.json)을 로드하고, 새로운 또는 업데이트된 번역 문자열을 식별한 후, 지정된 대상 언어에 대한 번역을 생성하고, 관련 대상 언어 JSON 네임스페이스 파일(예: locales/fr/common.json, locales/es/common.json, locales/zh/common.json)을 생성하거나 업데이트합니다.",
+  "partTwo.translate.paragraphThree": "실제로 작동하는지 확인하려면 언어 전환기 구성 요소를 가져올 수 있습니다.",
+  "partTwo.translate.note": "실제로 작동하는지 확인하려면 언어 전환기 구성 요소를 가져올 수 있습니다.",
+  "conclusion": "그게 전부입니다. 당신은 자신의 다국어 앱을 만들었습니다, 챗봇 스타일. 잘 했어요!"
 }

@@ -26,5 +26,11 @@
   "partTwo.intro.paragraphOne": "D'accord, maintenant que nous avons le frontend, nous sommes prêts à commencer notre pipeline d'infrastructure de traduction avec myelin.",
   "partTwo.intro.paragraphTwo": "Myelin est une infrastructure de traduction open source, locale en priorité, qui rend super facile la gestion, la synchronisation et l'exécution de traductions multilingues. La première étape pour l'utiliser est de l'initialiser.",
   "partTwo.intro.paragraphThree": "Vous serez invité à fournir la traduction source, les traductions cibles et le fournisseur de services d'IA de votre choix. Si vous le souhaitez, vous pouvez même ajouter un fournisseur d'IA personnalisé. Pour simplifier les choses, nous allons sélectionner openai.",
-  "partTwo.intro.paragraphFour": "Vous devrez également obtenir vos clés API et les enregistrer dans le fichier .env"
+  "partTwo.intro.paragraphFour": "Vous devrez également obtenir vos clés API et les enregistrer dans le fichier .env",
+  "partTwo.translate.title": "Traduire",
+  "partTwo.translate.paragraphOne": "Maintenant, nous sommes prêts à exécuter le pipeline de traduction. Nous pouvons le faire avec la commande suivante",
+  "partTwo.translate.paragraphTwo": "Lorsque vous exécutez cette commande, Myelin charge vos fichiers JSON source (par exemple, locales/en/common.json), identifie toute nouvelle chaîne de traduction ou toute chaîne mise à jour, produit des traductions pour vos langues cibles spécifiées et crée ou met à jour les fichiers JSON de langue cible correspondants avec espace de noms (par exemple, locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
+  "partTwo.translate.paragraphThree": "Pour vérifier si cela fonctionne vraiment, nous pouvons importer le composant de changement de langue.",
+  "partTwo.translate.note": "Pour vérifier si cela fonctionne vraiment, nous pouvons importer le composant de changement de langue.",
+  "conclusion": "Et c'est tout, vous avez construit votre propre application multilingue, à la manière de chadcn. Bien joué !"
 }
