@@ -40,9 +40,3 @@ export const translationApp: Entry = {
   tags: ["ai", "programming", "languages", "translation"],
   description: "We'll build a multi lingual translation called heyy.sh",
 };
-
-export const entries: Entry[] = [
-  multiLingualApp,
-  ragApp,
-  translationApp,
-]?.filter((item) => item?.status === "published");

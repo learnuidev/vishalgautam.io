@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import { EntryList } from "./notes/components/entry-list";
-import { entries } from "./notes/state/entries";
+
 import { NewsLetterSubscriptionForm } from "@/components/newsletter-subscription-form";
 import { useTranslation } from "@/libs/i18n-next/use-translation";
+import { useListEntries } from "./notes/hooks/use-list-entries";
 
 export default function Home() {
   const { t } = useTranslation(["home", "notes"]);
+
+  const entries = useListEntries();
 
   return (
     <div className="mt-40">

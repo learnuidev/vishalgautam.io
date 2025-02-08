@@ -2,11 +2,14 @@
 import { Input } from "@/components/ui/input";
 import { useMemo, useState } from "react";
 import { EntryList } from "./components/entry-list";
-import { entries } from "./state/entries";
+
 import { useTranslation } from "@/libs/i18n-next/use-translation";
+import { useListEntries } from "./hooks/use-list-entries";
 
 export default function Library() {
   const [filteredState, setFilteredState] = useState("");
+
+  const entries = useListEntries();
 
   const { t } = useTranslation("notes");
 
