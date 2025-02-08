@@ -31,6 +31,6 @@
   "partTwo.translate.paragraphOne": "Acum suntem gata să rulăm procesul de traducere. Putem face asta cu următoarea comandă",
   "partTwo.translate.paragraphTwo": "Când rulezi această comandă, Myelin încarcă fișierele tale JSON sursă (de exemplu, locales/en/common.json), identifică orice șiruri de traducere noi sau actualizate, produce traduceri pentru limbile țintă specificate și creează sau actualizează fișierele JSON corespunzătoare limbii țintă (de exemplu, locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
   "partTwo.translate.paragraphThree": "Pentru a verifica dacă funcționează de fapt, putem importa componenta de comutare a limbii.",
-  "partTwo.translate.note": "Pentru a verifica dacă funcționează de fapt, putem importa componenta de comutare a limbii.",
+  "partTwo.translate.note": "Notă: comutatorul de limbă este construit pe baza următoarelor componente chadcn: meniu derulant și buton. Pentru a le instala, vă rugăm să folosiți acest script:",
   "conclusion": "Și asta e tot, ai construit propria ta aplicație multilingvă, în stil chadcn. Bravo!"
 }

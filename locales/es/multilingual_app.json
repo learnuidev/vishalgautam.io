@@ -31,6 +31,6 @@
   "partTwo.translate.paragraphOne": "Ahora estamos listos para ejecutar la tubería de traducción. Podemos hacerlo con el siguiente comando.",
   "partTwo.translate.paragraphTwo": "Cuando ejecutas este comando, Myelin carga tus archivos JSON de origen (por ejemplo, locales/en/common.json), identifica cualquier cadena de traducción nueva o actualizada, produce traducciones para los idiomas de destino que especificaste y crea o actualiza los archivos JSON de idioma de destino con nombres de espacio relevantes (por ejemplo, locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
   "partTwo.translate.paragraphThree": "Para comprobar si realmente está funcionando, podemos importar el componente de cambio de idioma.",
-  "partTwo.translate.note": "Para comprobar si realmente está funcionando, podemos importar el componente de cambio de idioma.",
+  "partTwo.translate.note": "Nota: el conmutador de idioma se basa en los siguientes componentes de chadcn: menú desplegable y botón. Para instalarlos, utilice este script:",
   "conclusion": "Y eso es todo, has construido tu propia aplicación multilingüe, al estilo chadcn. ¡Bien hecho!"
 }

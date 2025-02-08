@@ -31,6 +31,6 @@
   "partTwo.translate.paragraphOne": "이제 번역 파이프라인을 실행할 준비가 되었습니다. 다음 명령어로 할 수 있습니다.",
   "partTwo.translate.paragraphTwo": "이 명령을 실행하면 Myelin이 소스 JSON 파일(예: locales/en/common.json)을 로드하고, 새로운 또는 업데이트된 번역 문자열을 식별한 후, 지정된 대상 언어에 대한 번역을 생성하고, 관련 대상 언어 JSON 네임스페이스 파일(예: locales/fr/common.json, locales/es/common.json, locales/zh/common.json)을 생성하거나 업데이트합니다.",
   "partTwo.translate.paragraphThree": "실제로 작동하는지 확인하려면 언어 전환기 구성 요소를 가져올 수 있습니다.",
-  "partTwo.translate.note": "실제로 작동하는지 확인하려면 언어 전환기 구성 요소를 가져올 수 있습니다.",
+  "partTwo.translate.note": "노트: 언어 전환기는 다음 chadcn 구성 요소인 드롭다운 메뉴와 버튼 위에 구축되었습니다. 설치하려면 이 스크립트를 사용하십시오:",
   "conclusion": "그게 전부입니다. 당신은 자신의 다국어 앱을 만들었습니다, 챗봇 스타일. 잘 했어요!"
 }

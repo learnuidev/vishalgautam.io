@@ -31,6 +31,6 @@
   "partTwo.translate.paragraphOne": "Now we are ready to run the translation pipeline. We can do that with the following command.",
   "partTwo.translate.paragraphTwo": "When you run this command, Myelin loads your source JSON files (e.g., locales/en/common.json), identifies any new or updated translation strings, produces translations for your specified target languages, and creates or updates the relevant target language JSON namespaced files (e.g., locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
   "partTwo.translate.paragraphThree": "To check if it is actually working, we can import the language-switcher component.",
-  "partTwo.translate.note": "To check if it is actually working, we can import the language-switcher component.",
+  "partTwo.translate.note": "Note: The language switcher is built on top of the following chadcn components: dropdown menu and button. To install them, please use this script:",
   "conclusion": "And that's it, you have built your own multilingual app, Chadcn style. Well done!"
 }

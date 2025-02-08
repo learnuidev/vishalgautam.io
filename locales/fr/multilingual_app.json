@@ -31,6 +31,6 @@
   "partTwo.translate.paragraphOne": "Maintenant, nous sommes prêts à exécuter le pipeline de traduction. Nous pouvons le faire avec la commande suivante",
   "partTwo.translate.paragraphTwo": "Lorsque vous exécutez cette commande, Myelin charge vos fichiers JSON source (par exemple, locales/en/common.json), identifie toute nouvelle chaîne de traduction ou toute chaîne mise à jour, produit des traductions pour vos langues cibles spécifiées et crée ou met à jour les fichiers JSON de langue cible correspondants avec espace de noms (par exemple, locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
   "partTwo.translate.paragraphThree": "Pour vérifier si cela fonctionne vraiment, nous pouvons importer le composant de changement de langue.",
-  "partTwo.translate.note": "Pour vérifier si cela fonctionne vraiment, nous pouvons importer le composant de changement de langue.",
+  "partTwo.translate.note": "Remarque : le sélecteur de langue est construit sur les composants chadcn suivants : menu déroulant et bouton. Pour les installer, veuillez utiliser ce script :",
   "conclusion": "Et c'est tout, vous avez construit votre propre application multilingue, à la manière de chadcn. Bien joué !"
 }

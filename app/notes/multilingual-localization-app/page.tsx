@@ -226,7 +226,7 @@ export const Banner = () => {
             {t("partTwo.translate.paragraphTwo")}
           </Paragraph>
           <Paragraph className="">
-            {t("partTwo.intro.paragraphThree")}
+            {t("partTwo.translate.paragraphThree")}
           </Paragraph>
 
           <Paragraph className="mt-12">{t("partTwo.translate.note")}</Paragraph>

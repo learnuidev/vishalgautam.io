@@ -31,6 +31,6 @@
   "partTwo.translate.paragraphOne": "現在我們準備好執行翻譯流程。我們可以使用以下命令來完成這個操作",
   "partTwo.translate.paragraphTwo": "當你運行這個命令時，Myelin 將加載你的源 JSON 文件（例如，locales/en/common.json），識別任何新的或更新的翻譯字符串，並生成你指定的目標語言的翻譯，並創建或更新相關的目標語言 JSON 命名空間文件（例如，locales/fr/common.json、locales/es/common.json、locales/zh/common.json）。",
   "partTwo.translate.paragraphThree": "要檢查它是否真的在工作，我們可以導入語言切換組件。",
-  "partTwo.translate.note": "要檢查它是否真的在工作，我們可以導入語言切換組件。",
+  "partTwo.translate.note": "注意：語言切換器是基於以下 chadcn 組件構建的：下拉菜單和按鈕。要安裝它們，請使用以下腳本：",
   "conclusion": "就這樣，你已經按照 chadcn 的風格構建了自己的多語言應用程序。幹得好！"
 }
