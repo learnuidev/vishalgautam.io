@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 
-import { copyTextToClipboard } from "@/libs/misc/copy-text-to-clipboard";
+import { copyToClipboard } from "@/libs/misc/copy-to-clipboard";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { useState } from "react";
 
@@ -13,7 +13,7 @@ export const CopyToClipboard = ({ text }: { text: string }) => {
       <button
         className="hover:text-gray-400 transition-all"
         onClick={() => {
-          copyTextToClipboard(text).then(() => {
+          copyToClipboard(text).then(() => {
             setShowSuccess(true);
 
             setTimeout(() => {
