@@ -14,7 +14,7 @@ export const useListTranslationsQuery = (options = {}) => {
 
       return resp.json();
     },
-    retry: false,
+    // retry: false,
     ...options,
   });
 };
