@@ -9,7 +9,7 @@ export const TheDock = ({ children }: { children?: React.ReactNode }) => {
 
   return (
     <div>
-      <div className={cn("flex w-full fixed z-50 bottom-0")}>
+      <div className={cn("flex w-full fixed z-10 bottom-0")}>
         <div className="block sm:hidden w-full">{children}</div>
       </div>
 
@@ -20,7 +20,7 @@ export const TheDock = ({ children }: { children?: React.ReactNode }) => {
         onMouseLeave={() => {
           setShow(false);
         }}
-        className={cn("flex w-full fixed z-50 bottom-0")}
+        className={cn("flex w-full fixed z-10 bottom-0")}
       >
         <div className="text-black">.</div>
         <AnimatePresence>
