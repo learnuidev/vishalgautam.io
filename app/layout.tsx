@@ -6,6 +6,8 @@ import { NavBar } from "@/components/navbar";
 import { ClerkProvider } from "@/lib/clerk/clerk-provider";
 import { Footer } from "@/components/footer";
 import { I18NextHtmlProvider } from "@/libs/i18n-next/i18n-next-html-provider";
+import { TheDock } from "@/components/the-dock";
+import { ControlButtons } from "@/components/control-buttons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,6 +49,10 @@ export default function RootLayout({
             <div className="flex-grow">
               <div className="p-4 max-w-3xl mx-auto">{children}</div>
             </div>
+
+            <TheDock>
+              <ControlButtons />
+            </TheDock>
 
             <Footer />
           </ThemeProvider>
