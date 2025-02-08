@@ -74,6 +74,10 @@ export const Myelin = ({ className }: { className?: string }) => {
         <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
           This is a developmental feature only. Sry
         </p>
+
+        <Link href="/" className="mt-8">
+          Home Page{" "}
+        </Link>
       </div>
     );
   }
