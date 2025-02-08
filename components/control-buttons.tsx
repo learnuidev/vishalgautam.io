@@ -20,7 +20,7 @@ export const ControlButtons = () => {
   const [playSwitch] = useSound(switchUrl);
 
   return (
-    <div className="space-x-4 flex items-center justify-center dark:bg-[rgb(11,15,18)] w-auto py-4 z-50">
+    <div className="space-x-4 flex items-center justify-center w-auto py-4 z-50">
       <button
         onClick={() => {
           if (isPlaying) {
