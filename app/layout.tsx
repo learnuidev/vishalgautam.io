@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { I18NextHtmlProvider } from "@/libs/i18n-next/i18n-next-html-provider";
 import { TheDock } from "@/components/the-dock";
 import { ControlButtons } from "@/components/control-buttons";
+import { MyelinLink } from "@/components/myelin/components/myelin-link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
           >
             <div className="flex-grow">{children}</div>
 
+            <MyelinLink />
             <TheDock>
               <ControlButtons />
             </TheDock>
