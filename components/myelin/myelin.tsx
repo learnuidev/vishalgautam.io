@@ -14,6 +14,7 @@ import { useUpsertCustomTranslationMutation } from "./mutations/use-upsert-custo
 import { useListCustomTranslationsQuery } from "./queries/use-list-custom-translations-query";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "@/libs/i18n-next/use-translation";
+import { NavBar } from "../navbar";
 
 function getNamespaces(translations: any): string[] {
   if (Array.isArray(translations)) {
@@ -188,29 +189,34 @@ export const Myelin = ({ className }: { className?: string }) => {
 
   if (data?.nodeEnv === "development") {
     return (
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl mt-32">{t("common:error")}</h1>
+      <>
+        <NavBar />
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-3xl mt-32">{t("common:error")}</h1>
 
-        <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
-          {t("common:somethingWentWrong")}
-        </p>
-      </div>
+          <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
+            {t("common:somethingWentWrong")}
+          </p>
+        </div>
+      </>
     );
   }
 
   if (data?.nodeEnv === "production") {
     return (
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl mt-32">{t("common:error")}</h1>
+      <>
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-3xl mt-32">{t("common:error")}</h1>
 
-        <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
-          {t("myelin:coming-soon")}
-        </p>
+          <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
+            {t("myelin:coming-soon")}
+          </p>
 
-        <Link href="/" className="mt-8">
-          {t("common:homePage")}
-        </Link>
-      </div>
+          <Link href="/" className="mt-8">
+            {t("common:homePage")}
+          </Link>
+        </div>
+      </>
     );
   }
 
