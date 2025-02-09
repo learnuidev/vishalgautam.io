@@ -302,7 +302,7 @@ export const Myelin = ({ className }: { className?: string }) => {
             setKeyTab(value);
           }}
         >
-          <TabsList className="space-x-4 rounded-full hover:shadow-lg transition dark:bg-black bg-white overflow-y-auto w-full">
+          <TabsList className="space-x-4 rounded-full hover:shadow-lg transition dark:bg-black bg-white overflow-y-auto w-full mb-4">
             {selectedKeys?.map((ns: string) => {
               return (
                 <TabsTrigger
@@ -318,8 +318,10 @@ export const Myelin = ({ className }: { className?: string }) => {
         </Tabs>
 
         <div className="px-16 relative">
-          <p className="mt-4 text-[16px] text-gray-500">{sourceLang}</p>
-          <h4 className="mb-4 sticky top-0">{sourceTranslation?.[keyTab]}</h4>
+          <div className="sticky bg-gray-200 dark:bg-[rgb(16,17,18)] px-4 py-[2px] top-[42px] rounded-2xl">
+            <p className="mt-4 text-[16px] text-gray-500">{sourceLang}</p>
+            <h4 className="mb-4">{sourceTranslation?.[keyTab]}</h4>
+          </div>
 
           <div className="space-y-8 mt-12">
             {translationsWithoutSourceLang?.map((item: any) => {
