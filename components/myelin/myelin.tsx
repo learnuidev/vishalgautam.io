@@ -61,12 +61,6 @@ function TranslationItem({ item, keyTab }: any) {
       key={JSON.stringify(item)}
       className="dark:bg-[rgb(21,22,23)] bg-gray-100 px-4 py-2 rounded-2xl"
     >
-      {/* {addCustomTranslation && (
-        <code>
-          <pre>{JSON.stringify(customTranslations, null, 4)}</pre>
-        </code>
-      )} */}
-
       <div className="flex justify-between items-center mb-4">
         <p className="text-[16px] text-gray-500">{item?.lang}</p>
 
@@ -110,7 +104,7 @@ function TranslationItem({ item, keyTab }: any) {
                 });
             }}
           >
-            Save
+            {upsertCustomTranslation?.isPending ? "Saving..." : "Save"}
           </Button>
 
           <Button
@@ -331,13 +325,6 @@ export const Myelin = ({ className }: { className?: string }) => {
                   item={item}
                   key={JSON.stringify(item)}
                 />
-              );
-              return (
-                <code key={JSON.stringify(item)}>
-                  <pre>
-                    {JSON.stringify(translationsWithoutSourceLang, null, 4)}
-                  </pre>
-                </code>
               );
             })}
           </div>
