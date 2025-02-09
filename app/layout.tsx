@@ -8,6 +8,7 @@ import { I18NextHtmlProvider } from "@/libs/i18n-next/i18n-next-html-provider";
 import { TheDock } from "@/components/the-dock";
 import { ControlButtons } from "@/components/control-buttons";
 import { MyelinLink } from "@/components/myelin/components/myelin-link";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Toaster />
             <div className="flex-grow">{children}</div>
 
             <MyelinLink />

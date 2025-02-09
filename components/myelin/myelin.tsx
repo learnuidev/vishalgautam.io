@@ -12,6 +12,7 @@ import myelinConfig from "@/myelin.config.json";
 import { Button } from "../ui/button";
 import { useUpsertCustomTranslationMutation } from "./mutations/use-upsert-custom-translation-mutation";
 import { useListCustomTranslationsQuery } from "./queries/use-list-custom-translations-query";
+import { useToast } from "@/hooks/use-toast";
 
 function getNamespaces(translations: any): string[] {
   if (Array.isArray(translations)) {
@@ -40,6 +41,8 @@ function TranslationItem({ item, keyTab }: any) {
   const [customTranslationInput, setCustomTranslationInput] = useState(
     item?.[keyTab]
   );
+
+  const { toast } = useToast();
 
   const customTranslations = useGetCustomTranslations(item?.id);
 
@@ -99,7 +102,10 @@ function TranslationItem({ item, keyTab }: any) {
                   },
                 })
                 .then(() => {
-                  alert("success");
+                  toast({
+                    title: "Success 🎉",
+                    description: `Updated successfully`,
+                  });
                   setAddCustomTranslation(false);
                 });
             }}
