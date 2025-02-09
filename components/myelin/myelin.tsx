@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 import { AnimatedLoadingText } from "../animated-loading-text";
 import myelinConfig from "@/myelin.config.json";
 import { Button } from "../ui/button";
+import { useUpsertCustomTranslationMutation } from "./mutations/use-upsert-custom-translation-mutation";
+import { useListCustomTranslationsQuery } from "./queries/use-list-custom-translations-query";
 
 function getNamespaces(translations: any): string[] {
   if (Array.isArray(translations)) {
@@ -23,6 +25,113 @@ function getNamespaces(translations: any): string[] {
   }
 
   return [];
+}
+
+const useGetCustomTranslations = (id: string) => {
+  const { data: customTranslationsList } = useListCustomTranslationsQuery({});
+
+  return customTranslationsList?.find(
+    (translation: any) => translation?.id === id
+  );
+};
+
+function TranslationItem({ item, keyTab }: any) {
+  const [addCustomTranslation, setAddCustomTranslation] = useState(false);
+  const [customTranslationInput, setCustomTranslationInput] = useState(
+    item?.[keyTab]
+  );
+
+  const customTranslations = useGetCustomTranslations(item?.id);
+
+  const customTranslation = customTranslations?.translations?.[keyTab];
+
+  const upsertCustomTranslation = useUpsertCustomTranslationMutation();
+
+  useEffect(() => {
+    if (customTranslation) {
+      setCustomTranslationInput(customTranslation);
+    }
+  }, [customTranslation]);
+
+  return (
+    <div
+      key={JSON.stringify(item)}
+      className="dark:bg-[rgb(21,22,23)] bg-gray-100 px-4 py-2 rounded-2xl"
+    >
+      {/* {addCustomTranslation && (
+        <code>
+          <pre>{JSON.stringify(customTranslations, null, 4)}</pre>
+        </code>
+      )} */}
+
+      <div className="flex justify-between items-center mb-4">
+        <p className="text-[16px] text-gray-500">{item?.lang}</p>
+
+        {customTranslation && (
+          <p className={"text-[16px] text-gray-500"}>custom</p>
+        )}
+      </div>
+
+      {addCustomTranslation ? (
+        <input
+          value={customTranslationInput}
+          onChange={(event) => {
+            setCustomTranslationInput(event.target.value);
+          }}
+          className="block mb-4 w-full dark:bg-gray-150 p-2 focus:outline-0 border-0 border-none"
+          placeholder={"Custom translation goes here..."}
+        />
+      ) : (
+        <h4 className="mb-4 p-2">{customTranslation || item?.[keyTab]}</h4>
+      )}
+
+      {addCustomTranslation ? (
+        <div className="space-x-4">
+          <Button
+            className="text-sm rounded-full"
+            onClick={() => {
+              upsertCustomTranslation
+                .mutateAsync({
+                  id: item?.id,
+                  projectId: item?.projectId,
+                  translations: {
+                    [keyTab]: customTranslationInput,
+                  },
+                })
+                .then(() => {
+                  alert("success");
+                  setAddCustomTranslation(false);
+                });
+            }}
+          >
+            Save
+          </Button>
+
+          <Button
+            className="text-sm rounded-full"
+            variant={"outline"}
+            onClick={() => {
+              setAddCustomTranslation((prev) => !prev);
+            }}
+          >
+            Cancel
+          </Button>
+        </div>
+      ) : (
+        <Button
+          className="text-sm rounded-full"
+          variant={"outline"}
+          onClick={() => {
+            setAddCustomTranslation((prev) => !prev);
+          }}
+        >
+          {customTranslation
+            ? "Edit custom translation"
+            : "Add custom translation"}
+        </Button>
+      )}
+    </div>
+  );
 }
 
 // function KeyTabs() {}
@@ -111,11 +220,11 @@ export const Myelin = ({ className }: { className?: string }) => {
   const sourceLang = myelinConfig?.locale?.sourceLanguage;
 
   const translationsIncludingSourceLang = filteredTranslations
-    ?.map((item) => [item?.lang, item?.translations])
-    ?.map(([lang, item]) => {
+    ?.map((item) => [item, item?.translations])
+    ?.map(([item, translations]) => {
       return {
-        lang: lang,
-        [keyTab]: item?.[keyTab],
+        ...item,
+        [keyTab]: translations?.[keyTab],
       };
     });
 
@@ -130,7 +239,7 @@ export const Myelin = ({ className }: { className?: string }) => {
   );
 
   return (
-    <div className={cn(className, "relative px-8")}>
+    <div className={cn(className, "relative")}>
       <div className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
         <div>
           <Tabs
@@ -149,12 +258,10 @@ export const Myelin = ({ className }: { className?: string }) => {
 
               const newKeyTab = Object.keys(filteredTranslationsOnly?.[0])?.[0];
 
-              console.log("KEY TAB", newKeyTab);
-
               setKeyTab(newKeyTab);
             }}
           >
-            <TabsList className="space-x-4 rounded-full hover:shadow-lg transition overflow-y-auto">
+            <TabsList className="space-x-4 rounded-full mt-2 hover:shadow-lg transition overflow-y-auto">
               {nameSpaces?.map((ns: string) => {
                 return (
                   <TabsTrigger
@@ -204,24 +311,18 @@ export const Myelin = ({ className }: { className?: string }) => {
           </TabsList>
         </Tabs>
 
-        <div className="px-32">
+        <div className="px-16 relative">
           <p className="mt-4 text-[16px] text-gray-500">{sourceLang}</p>
-          <h4 className="mb-4">{sourceTranslation?.[keyTab]}</h4>
+          <h4 className="mb-4 sticky top-0">{sourceTranslation?.[keyTab]}</h4>
 
           <div className="space-y-8 mt-12">
             {translationsWithoutSourceLang?.map((item: any) => {
               return (
-                <div
+                <TranslationItem
+                  keyTab={keyTab}
+                  item={item}
                   key={JSON.stringify(item)}
-                  className="dark:bg-[rgb(21,22,23)] bg-gray-500 p-4 rounded-2xl"
-                >
-                  <p className="mt-4 text-[16px] text-gray-500">{item?.lang}</p>
-                  <h4 className="mb-4">{item?.[keyTab]}</h4>
-
-                  <Button className="text-sm" variant={"outline"}>
-                    Add custom translation
-                  </Button>
-                </div>
+                />
               );
               return (
                 <code key={JSON.stringify(item)}>
