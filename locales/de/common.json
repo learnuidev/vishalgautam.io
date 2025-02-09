@@ -4,5 +4,8 @@
   "coming-soon": "Demnächst",
   "view": "Ansehen",
   "courses": "Kurse",
-  "subscribe": "Abonnieren"
+  "subscribe": "Abonnieren",
+  "error": "Fehler",
+  "somethingWentWrong": "Etwas ist schief gelaufen",
+  "homePage": "Startseite"
 }

@@ -4,5 +4,8 @@
   "coming-soon": "Coming Soon",
   "view": "View",
   "courses": "Courses",
-  "subscribe": "Subscribe"
+  "subscribe": "Subscribe",
+  "error": "Error",
+  "somethingWentWrong": "Something went wrong",
+  "homePage": "Home Page"
 }

@@ -4,5 +4,8 @@
   "coming-soon": "Скоро",
   "view": "Просмотреть",
   "courses": "Курсы",
-  "subscribe": "Подписаться"
+  "subscribe": "Подписаться",
+  "error": "Ошибка",
+  "somethingWentWrong": "Что-то пошло не так",
+  "homePage": "Домашняя страница"
 }

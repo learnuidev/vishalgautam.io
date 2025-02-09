@@ -4,5 +4,8 @@
   "coming-soon": "قريبًا",
   "view": "عرض",
   "courses": "الدورات",
-  "subscribe": "اشترك"
+  "subscribe": "اشترك",
+  "error": "خطأ",
+  "somethingWentWrong": "حدث خطأ ما",
+  "homePage": "الصفحة الرئيسية"
 }

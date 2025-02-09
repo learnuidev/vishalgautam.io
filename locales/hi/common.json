@@ -4,5 +4,8 @@
   "coming-soon": "जल्द आ रहा है",
   "view": "देखें",
   "courses": "पाठ्यक्रम",
-  "subscribe": "सदस्यता लें"
+  "subscribe": "सदस्यता लें",
+  "error": "त्रुटि",
+  "somethingWentWrong": "कुछ गलत हुआ",
+  "homePage": "होम पेज"
 }

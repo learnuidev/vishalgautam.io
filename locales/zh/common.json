@@ -4,5 +4,8 @@
   "coming-soon": "即将推出",
   "view": "查看",
   "courses": "课程",
-  "subscribe": "订阅"
+  "subscribe": "订阅",
+  "error": "错误",
+  "somethingWentWrong": "出错了",
+  "homePage": "主页"
 }

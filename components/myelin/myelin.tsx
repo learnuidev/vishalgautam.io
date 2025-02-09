@@ -13,6 +13,7 @@ import { Button } from "../ui/button";
 import { useUpsertCustomTranslationMutation } from "./mutations/use-upsert-custom-translation-mutation";
 import { useListCustomTranslationsQuery } from "./queries/use-list-custom-translations-query";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "@/libs/i18n-next/use-translation";
 
 function getNamespaces(translations: any): string[] {
   if (Array.isArray(translations)) {
@@ -140,6 +141,8 @@ export const Myelin = ({ className }: { className?: string }) => {
   const [tab, setTab] = useState("common.json");
   const [keyTab, setKeyTab] = useState("");
 
+  const { t } = useTranslation(["common", "myelin"]);
+
   const { data, isLoading } = useListTranslationsQuery({});
 
   useEffect(() => {
@@ -177,7 +180,7 @@ export const Myelin = ({ className }: { className?: string }) => {
       <div className="flex flex-col justify-center items-center mt-32">
         <AnimatedLoadingText
           className="text-xl font-light"
-          message={"Loading translations..."}
+          message={t("myelin:loadingTranslations")}
         />
       </div>
     );
@@ -186,10 +189,10 @@ export const Myelin = ({ className }: { className?: string }) => {
   if (data?.nodeEnv === "development") {
     return (
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl mt-32">Error</h1>
+        <h1 className="text-3xl mt-32">{t("common:error")}</h1>
 
         <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
-          Something went wrong
+          {t("common:somethingWentWrong")}
         </p>
       </div>
     );
@@ -198,14 +201,14 @@ export const Myelin = ({ className }: { className?: string }) => {
   if (data?.nodeEnv === "production") {
     return (
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl mt-32">Error</h1>
+        <h1 className="text-3xl mt-32">{t("common:error")}</h1>
 
         <p className="text-xl font-light text-gray-700 dark:text-gray-300 mt-4">
-          Coming soon. This is a developmental feature only for now.
+          {t("myelin:coming-soon")}
         </p>
 
         <Link href="/" className="mt-8">
-          Home Page{" "}
+          {t("common:homePage")}
         </Link>
       </div>
     );
