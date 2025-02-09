@@ -205,6 +205,7 @@ export const Myelin = ({ className }: { className?: string }) => {
   if (data?.nodeEnv === "production") {
     return (
       <>
+        <NavBar />
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl mt-32">{t("common:error")}</h1>
 
