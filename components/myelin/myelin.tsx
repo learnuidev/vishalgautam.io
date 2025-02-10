@@ -49,6 +49,7 @@ function TranslationItem({ item, keyTab }: any) {
   const customTranslation = customTranslations?.translations?.[keyTab];
 
   const upsertCustomTranslation = useUpsertCustomTranslationMutation();
+  const isRemote = myelinConfig.sync.type === "remote";
 
   useEffect(() => {
     if (customTranslation) {
@@ -64,7 +65,7 @@ function TranslationItem({ item, keyTab }: any) {
       <div className="flex justify-between items-center mb-4">
         <p className="text-[16px] text-gray-500">{item?.lang}</p>
 
-        {customTranslation && (
+        {customTranslation && isRemote && (
           <p className={"text-[16px] text-gray-500"}>custom</p>
         )}
       </div>
@@ -79,7 +80,7 @@ function TranslationItem({ item, keyTab }: any) {
           placeholder={"Custom translation goes here..."}
         />
       ) : (
-        <h4 className="mb-4 p-2">{customTranslation || item?.[keyTab]}</h4>
+        <h4 className="mb-4 p-2">{customTranslationInput}</h4>
       )}
 
       {addCustomTranslation ? (
