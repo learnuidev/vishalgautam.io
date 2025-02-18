@@ -1,11 +1,8 @@
 {
-  "signIn": "登入",
   "footer": "© 2025 Zafron Labs, Inc. 版權所有。",
   "coming-soon": "即將推出",
   "view": "查看",
   "courses": "課程",
   "subscribe": "訂閱",
-  "error": "錯誤",
-  "somethingWentWrong": "發生了某些問題",
-  "homePage": "首頁"
+  "error": "錯誤"
 }

@@ -1,11 +1,8 @@
 {
-  "signIn": "Iniciar sesión",
   "footer": "© 2025 Zafron Labs, Inc. Todos los derechos reservados.",
   "coming-soon": "Próximamente",
   "view": "Ver",
   "courses": "Cursos",
   "subscribe": "Suscribirse",
-  "error": "Error",
-  "somethingWentWrong": "Algo salió mal",
-  "homePage": "Página Principal"
+  "error": "Error"
 }

@@ -1,11 +1,8 @@
 {
-  "signIn": "ورود به سیستم",
   "footer": "© 2025 زافران لبز، Inc. تمامی حقوق محفوظ است.",
   "coming-soon": "به زودی",
   "view": "مشاهده",
   "courses": "دوره‌ها",
   "subscribe": "اشتراک‌گذاری",
-  "error": "خطا",
-  "somethingWentWrong": "چیزی اشتباه است",
-  "homePage": "صفحه اصلی"
+  "error": "خطا"
 }

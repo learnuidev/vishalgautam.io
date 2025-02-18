@@ -1,11 +1,8 @@
 {
-  "signIn": "Войти",
   "footer": "© 2025 Zafron Labs, Inc. Все права защищены.",
   "coming-soon": "Скоро",
   "view": "Просмотреть",
   "courses": "Курсы",
   "subscribe": "Подписаться",
-  "error": "Ошибка",
-  "somethingWentWrong": "Что-то пошло не так",
-  "homePage": "Домашняя страница"
+  "error": "Ошибка"
 }

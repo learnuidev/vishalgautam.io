@@ -4,36 +4,29 @@
   "titleOne": "Part A: Frontend",
   "stepOne.title": "Step 1: Create NextJS Project",
   "stepOne.paragraphOne": "We will run this command to start a new next js project",
-
   "stepTwo.title": "Step 2: Add chadcn",
   "stepTwo.paragraphOne": "Next, lets add chadcn into our project. Myelin is heavily inspired from chadcn and uses a lot of its primities as a building blocks to create custom components such as language-switcher",
   "stepThree.title": "Step 3: Add locales",
   "stepThree.paragraphOne": "Next, lets add locales into our application. We are going to create a single namespaced locale called common.json inside locales/en directory. Myelin supports both namespaced and non-namespaced locales. But I highly encourage you to stick to namespaced locales.",
-
   "stepFour.title": "Step 4: Add i18next boilerplate code",
   "stepFour.paragraphOne": "Next lets add the i18n-next and friends into our app. We can use the following command to do so:",
   "stepFour.paragraphTwo": "Running this will do the following:",
   "stepFour.paragraphThree": "Install core i18next library and additional modules for language detection, backend chaining, and resource transformation.",
   "stepFour.paragraphFour": "Implement various utility functions and components in the libs/i18n-next directory, including cookie management, language detection, configuration, providers, and custom hooks for translation functionality.",
-
   "stepFive.title": "Step 5: Wrap layout.tsx",
   "stepFive.paragraphOne": "We are going to wrap layout component with I18NextHtmlProvider",
-
   "stepSix.title": "Step 6: Generate types",
   "stepSix.paragraph": "Before we can start using the translations, let's generate types. This will help us with type completion when using the useTranslation hook. We can run npx myelino upsert and select i18next.d.ts. This is going to generate a custom types under types directory.",
-
   "stepSeven.title": "Step 7: Use the translations",
   "stepSeven.paragraphOne": "With custom types generated, we can use the custom useTranslation hook like so:",
   "stepSeven.paragraphTwo": "You'll notice type completion when typing namespaces. This is before we generated types in previous step.",
   "stepSeven.paragraphThree": "We are done with frontend section. Now the fun part, multi lingual translations with Myelin AI.",
-
   "partTwo.title": "Part B: Multi Lingual Translation with Myelin AI",
   "partTwo.intro": "intro",
   "partTwo.intro.paragraphOne": "Alright, now we have the frontend, we are ready to start our translation infra pipeline with myelin.",
   "partTwo.intro.paragraphTwo": "Myelin is an open source local first translation infrastructure, that makes it super easy to manage, sync and run multi language translations. First step in using is is to initialize it.",
   "partTwo.intro.paragraphThree": "You will be asked to provide source translation, target translations and AI service provider of your choice. If you want you can even add custom ai provider. To keep things simple we are going to select openai.",
   "partTwo.intro.paragraphFour": "            You will also need to get your api keys and saved it in .env file",
-
   "partTwo.translate.title": "Translate",
   "partTwo.translate.paragraphOne": "Now we are ready to run the translation pipeline. We can do that with the following command",
   "partTwo.translate.paragraphTwo": "When you run this command, Myelin loads your source JSON files (e.g., locales/en/common.json), identifies any new or updated translation strings, produces translations for your specified target languages, and creates or updates the relevant target language JSON namespaced files (e.g., locales/fr/common.json, locales/es/common.json, locales/zh/common.json).",
