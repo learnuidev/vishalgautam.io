@@ -16,7 +16,7 @@
   "stepFive.title": "Paso 5: Envolver layout.tsx",
   "stepFive.paragraphOne": "Vamos a envolver el componente layout con I18NextHtmlProvider.",
   "stepSix.title": "Paso 6: Generar tipos",
-  "stepSix.paragraph": "Antes de poder empezar a usar las traducciones, generemos los tipos. Esto nos ayudará con la finalización de tipos cuando usemos el hook useTranslation. Podemos ejecutar npx myelino upsert y seleccionar i18next.d.ts. Esto generará tipos personalizados en el directorio types.",
+  "stepSix.paragraph": "Antes de que podamos comenzar a utilizar las traducciones, generemos tipos. Esto nos ayudará con la autocompletación de tipos al usar el hook useTranslation. Podemos ejecutar npx myelin.dev@latest upsert y seleccionar i18next.d.ts. Esto generará tipos personalizados en el directorio de tipos.",
   "stepSeven.title": "Paso 7: Usar las traducciones",
   "stepSeven.paragraphOne": "Con los tipos personalizados generados, podemos usar el hook useTranslation personalizado de la siguiente manera:",
   "stepSeven.paragraphTwo": "Notarás la finalización de tipos al escribir los espacios de nombres. Esto es porque generamos los tipos en el paso anterior.",

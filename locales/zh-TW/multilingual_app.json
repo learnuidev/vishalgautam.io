@@ -16,7 +16,7 @@
   "stepFive.title": "步驟 5：包裹 layout.tsx",
   "stepFive.paragraphOne": "我們將使用 I18NextHtmlProvider 包裹布局組件。",
   "stepSix.title": "步驟 6：生成類型",
-  "stepSix.paragraph": "在我們開始使用翻譯之前，讓我們生成類型。這將幫助我們在使用 useTranslation hook 時進行類型補全。我們可以運行 npx myelino upsert 並選擇 i18next.d.ts。這將在 types 目錄中生成自定義類型。",
+  "stepSix.paragraph": "在我們開始使用翻譯之前，讓我們生成類型。這將幫助我們在使用 useTranslation 鉤子時進行類型補全。我們可以運行 npx myelin.dev@latest upsert 並選擇 i18next.d.ts。這將在 types 目錄下生成自定義類型。",
   "stepSeven.title": "步驟 7：使用翻譯",
   "stepSeven.paragraphOne": "生成自定義類型後，我們可以這樣使用自定義 useTranslation hook：",
   "stepSeven.paragraphTwo": "您會注意到在輸入命名空間時會出現類型補全。這是在我們在前一步生成類型之前的情況。",

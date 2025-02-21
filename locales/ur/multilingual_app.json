@@ -16,7 +16,7 @@
   "stepFive.title": "قدم 5: layout.tsx کو لپیٹیں",
   "stepFive.paragraphOne": "ہم layout کمپوننٹ کو I18NextHtmlProvider کے ساتھ لپیٹنے جا رہے ہیں۔",
   "stepSix.title": "قدم 6: اقسام جنریٹ کریں",
-  "stepSix.paragraph": "ترجمے کا استعمال شروع کرنے سے پہلے، آئیے اقسام جنریٹ کریں۔ یہ ہمیں useTranslation ہوک کے استعمال کے وقت قسم کی تکمیل میں مدد کرے گا۔ ہم npx myelino upsert چلا سکتے ہیں اور i18next.d.ts منتخب کر سکتے ہیں۔ یہ types ڈائریکٹری کے تحت حسب ضرورت اقسام جنریٹ کرے گا۔",
+  "stepSix.paragraph": "ترجموں کا استعمال شروع کرنے سے پہلے، آئیے اقسام بنائیں۔ یہ ہمیں useTranslation ہک کے استعمال کرتے وقت قسم کی تکمیل میں مدد دے گا۔ ہم npx myelin.dev@latest upsert چلا سکتے ہیں اور i18next.d.ts کا انتخاب کر سکتے ہیں۔ یہ types ڈائریکٹری کے تحت اپنی مرضی کی اقسام تیار کرنے والا ہے۔",
   "stepSeven.title": "قدم 7: ترجمے کا استعمال کریں",
   "stepSeven.paragraphOne": "حسب ضرورت اقسام جنریٹ ہونے کے ساتھ، ہم حسب ضرورت useTranslation ہوک کا استعمال کر سکتے ہیں:",
   "stepSeven.paragraphTwo": "آپ namespaces میں ٹائپ کی تکمیل کی نوٹ کریں گے۔ یہ اس سے پہلے ہے جب ہم نے پچھلے قدم میں اقسام جنریٹ کیں۔",

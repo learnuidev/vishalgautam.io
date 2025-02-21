@@ -16,7 +16,7 @@
   "stepFive.title": "Étape 5 : Encapsuler layout.tsx",
   "stepFive.paragraphOne": "Nous allons encapsuler le composant layout avec I18NextHtmlProvider",
   "stepSix.title": "Étape 6 : Générer les types",
-  "stepSix.paragraph": "Avant de pouvoir commencer à utiliser les traductions, générons les types. Cela nous aidera avec la complétion de type lors de l'utilisation du hook useTranslation. Nous pouvons exécuter npx myelino upsert et sélectionner i18next.d.ts. Cela va générer des types personnalisés dans le répertoire types.",
+  "stepSix.paragraph": "Avant de pouvoir commencer à utiliser les traductions, générons des types. Cela nous aidera avec la complétion des types lors de l'utilisation du hook useTranslation. Nous pouvons exécuter npx myelin.dev@latest upsert et sélectionner i18next.d.ts. Cela va générer des types personnalisés dans le répertoire types.",
   "stepSeven.title": "Étape 7 : Utiliser les traductions",
   "stepSeven.paragraphOne": "Avec les types personnalisés générés, nous pouvons utiliser le hook useTranslation personnalisé comme ceci :",
   "stepSeven.paragraphTwo": "Vous remarquerez la complétion de type lors de la saisie des espaces de noms. C'est parce que nous avons généré les types à l'étape précédente.",

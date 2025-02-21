@@ -16,7 +16,7 @@
   "stepFive.title": "Step 5: Wrap layout.tsx",
   "stepFive.paragraphOne": "We are going to wrap the layout component with I18NextHtmlProvider.",
   "stepSix.title": "Step 6: Generate types",
-  "stepSix.paragraph": "Before we can start using the translations, let's generate types. This will help us with type completion when using the useTranslation hook. We can run `npx myelino upsert` and select `i18next.d.ts`. This will generate custom types under the types directory.",
+  "stepSix.paragraph": "Before we can start using the translations, let's generate types. This will help us with type completion when using the useTranslation hook. We can run npx myelin.dev@latest upsert and select i18next.d.ts. This is going to generate custom types under the types directory.",
   "stepSeven.title": "Step 7: Use the translations",
   "stepSeven.paragraphOne": "With custom types generated, we can use the custom useTranslation hook like so:",
   "stepSeven.paragraphTwo": "You'll notice type completion when typing namespaces. This is because we generated types in the previous step.",

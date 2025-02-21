@@ -16,7 +16,7 @@
   "stepFive.title": "Pasul 5: Împachetare layout.tsx",
   "stepFive.paragraphOne": "Vom împacheta componenta layout cu I18NextHtmlProvider.",
   "stepSix.title": "Pasul 6: Generează tipuri",
-  "stepSix.paragraph": "Înainte să putem începe să folosim traducerile, să generăm tipuri. Acest lucru ne va ajuta cu completarea tipurilor atunci când folosim hook-ul useTranslation. Putem rula npx myelino upsert și selecta i18next.d.ts. Aceasta va genera tipuri personalizate în directorul types.",
+  "stepSix.paragraph": "Înainte de a putea începe să folosim traducerile, să generăm tipuri. Acest lucru ne va ajuta cu completarea tipurilor atunci când folosim hook-ul useTranslation. Putem rula npx myelin.dev@latest upsert și selecta i18next.d.ts. Acest lucru va genera tipuri personalizate în directorul types.",
   "stepSeven.title": "Pasul 7: Folosește traducerile",
   "stepSeven.paragraphOne": "Cu tipuri personalizate generate, putem folosi hook-ul custom useTranslation astfel:",
   "stepSeven.paragraphTwo": "Vei observa completarea tipurilor când tastezi spațiile de nume. Aceasta se întâmplă înainte să generăm tipurile în pasul anterior.",

@@ -16,7 +16,7 @@
   "stepFive.title": "步骤 5：包装 layout.tsx",
   "stepFive.paragraphOne": "我们将使用 I18NextHtmlProvider 包装布局组件。",
   "stepSix.title": "步骤 6：生成类型",
-  "stepSix.paragraph": "在我们可以开始使用翻译之前，先生成类型。这将帮助我们在使用 useTranslation hook 时进行类型补全。我们可以运行 npx myelino upsert 并选择 i18next.d.ts。这将生成一个自定义类型在 types 目录下。",
+  "stepSix.paragraph": "在我们开始使用翻译之前，让我们生成类型。这将帮助我们在使用useTranslation钩子时进行类型补全。我们可以运行npx myelin.dev@latest upsert并选择i18next.d.ts。这将生成一个自定义类型，位于types目录下。",
   "stepSeven.title": "步骤 7：使用翻译",
   "stepSeven.paragraphOne": "生成自定义类型后，我们可以像这样使用自定义的 useTranslation hook：",
   "stepSeven.paragraphTwo": "您会注意到在输入名称空间时的类型补全。这是在我们之前的步骤中生成类型之前。",

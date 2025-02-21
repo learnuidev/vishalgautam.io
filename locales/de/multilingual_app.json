@@ -16,7 +16,7 @@
   "stepFive.title": "Schritt 5: layout.tsx einwickeln",
   "stepFive.paragraphOne": "Wir werden die Layout-Komponente mit I18NextHtmlProvider einwickeln.",
   "stepSix.title": "Schritt 6: Typen generieren",
-  "stepSix.paragraph": "Bevor wir mit den Übersetzungen beginnen können, lassen Sie uns die Typen generieren. Dies wird uns bei der Typvervollständigung beim Verwenden des useTranslation-Hooks helfen. Wir können npx myelino upsert ausführen und i18next.d.ts auswählen. Dies generiert benutzerdefinierte Typen im Verzeichnis types.",
+  "stepSix.paragraph": "Bevor wir mit der Verwendung der Übersetzungen beginnen können, lassen Sie uns Typen generieren. Dies wird uns bei der Typvervollständigung helfen, wenn wir den useTranslation-Hook verwenden. Wir können npx myelin.dev@latest upsert ausführen und i18next.d.ts auswählen. Dies wird benutzerdefinierte Typen im Verzeichnis types generieren.",
   "stepSeven.title": "Schritt 7: Verwenden Sie die Übersetzungen",
   "stepSeven.paragraphOne": "Mit den generierten benutzerdefinierten Typen können wir den benutzerdefinierten useTranslation-Hook wie folgt verwenden:",
   "stepSeven.paragraphTwo": "Sie werden die Typvervollständigung bei der Eingabe von Namensräumen bemerken. Dies ist, bevor wir die Typen im vorherigen Schritt generiert haben.",

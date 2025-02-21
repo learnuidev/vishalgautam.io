@@ -16,7 +16,7 @@
   "stepFive.title": "5단계: layout.tsx 래핑",
   "stepFive.paragraphOne": "우리는 I18NextHtmlProvider로 레이아웃 구성 요소를 래핑할 것입니다.",
   "stepSix.title": "6단계: 타입 생성",
-  "stepSix.paragraph": "번역을 사용하기 시작하기 전에 타입을 생성합시다. 이는 useTranslation 훅 사용 시 타입 완성에 도움이 될 것입니다. npx myelino upsert를 실행하고 i18next.d.ts를 선택합니다. 이는 types 디렉토리 아래에 사용자 정의 타입을 생성할 것입니다.",
+  "stepSix.paragraph": "번역을 사용하기 전에, 타입을 생성해 봅시다. 이것은 useTranslation 훅을 사용할 때 타입 완성을 도와줍니다. npx myelin.dev@latest upsert를 실행하고 i18next.d.ts를 선택하면 됩니다. 이것은 types 디렉토리 아래에 커스텀 타입을 생성할 것입니다.",
   "stepSeven.title": "7단계: 번역 사용",
   "stepSeven.paragraphOne": "생성된 사용자 정의 타입을 사용하여 다음과 같이 사용자 정의 useTranslation 훅을 사용할 수 있습니다:",
   "stepSeven.paragraphTwo": "네임스페이스를 입력할 때 타입 완성을 볼 수 있습니다. 이는 이전 단계에서 타입을 생성하기 전입니다.",

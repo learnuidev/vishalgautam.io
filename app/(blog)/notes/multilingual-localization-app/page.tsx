@@ -63,7 +63,7 @@ export default function MultlingualLocalizationApp() {
 
           <Paragraph>{t("stepFour.paragraphOne")}</Paragraph>
 
-          <CodeBlock codeBlock={`npx myelino add i18next`} />
+          <CodeBlock codeBlock={`npx myelin.dev@latest add i18next`} />
 
           <Paragraph className="font-semibold underline">
             {t("stepFour.paragraphTwo")}
@@ -97,7 +97,7 @@ export default function MultlingualLocalizationApp() {
 
           <Paragraph>{t("stepSix.paragraph")}</Paragraph>
 
-          <CodeBlock codeBlock={`npx myelino upsert i18next.d.ts`} />
+          <CodeBlock codeBlock={`npx myelin.dev@latest upsert i18next.d.ts`} />
         </SectionContainer>
         <SectionContainer>
           <Header4>{t("stepSeven.title")}</Header4>
@@ -139,7 +139,7 @@ export const Banner = () => {
           <Paragraph>{t("partTwo.intro.paragraphOne")}</Paragraph>
           <Paragraph>{t("partTwo.intro.paragraphTwo")}</Paragraph>
 
-          <CodeBlock codeBlock="npx myelino" />
+          <CodeBlock codeBlock="npx myelin.dev@latest" />
 
           <Paragraph>{t("partTwo.intro.paragraphThree")}</Paragraph>
           <Paragraph>{t("partTwo.intro.paragraphFour")}</Paragraph>
@@ -150,7 +150,7 @@ export const Banner = () => {
 
           <Paragraph>{t("partTwo.translate.paragraphOne")}</Paragraph>
 
-          <CodeBlock codeBlock="npx myelino translate" />
+          <CodeBlock codeBlock="npx myelin.dev@latest translate" />
 
           <Paragraph className="mb-12">
             {t("partTwo.translate.paragraphTwo")}
