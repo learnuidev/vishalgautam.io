@@ -20,7 +20,7 @@ const subscribe = async ({
 };
 
 export const NewsLetterSubscriptionForm = () => {
-  const { t } = useTranslation("subscriptionForm");
+  const { t } = useTranslation(["subscriptionForm"]);
   const [email, setEmail] = useState("");
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,8 +34,10 @@ export const NewsLetterSubscriptionForm = () => {
   };
   return (
     <section className="dark:bg-[rgb(14,15,16)] bg-gray-100 mt-12 h-56 sm:h-48 transition-height relative rounded-3xl bg-gradient-to-br from-react to-react-link px-8 py-9 sm:px-12 sm:pt-10 sm:pb-16 duration-500 shadow-lg">
-      <h4 className="text-xl font-bold">{t("title")}</h4>
-      <p className="text-sm text-gray-400 mb-5">{t("description")}</p>
+      <h4 className="text-xl font-bold">{t("subscriptionForm:title")}</h4>
+      <p className="text-sm text-gray-400 mb-5">
+        {t("subscriptionForm:description")}
+      </p>
 
       <form onSubmit={submitForm}>
         <div className="flex bg-white dark:bg-[rgb(10,11,12)] flex-col gap-2 rounded-md focus-within:border-slate-300 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:border sm:border-slate-500 dark:sm:border-slate-800 sm:p-1">
@@ -53,7 +55,7 @@ export const NewsLetterSubscriptionForm = () => {
             type="submit"
             className="flex h-8 items-center justify-center rounded-md bg-slate-800 px-5 py-1 font-medium tracking-wide text-white transition-colors hover:cursor-pointer hover:text-react-link disabled:cursor-not-allowed disabled:hover:text-white"
           >
-            {t("button.title")}
+            {t("subscriptionForm:button.title")}
           </button>
         </div>
       </form>

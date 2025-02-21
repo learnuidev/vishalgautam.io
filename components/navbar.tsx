@@ -43,20 +43,20 @@ function NavItemLink({
 }
 
 function NavDesktop() {
-  const { t } = useTranslation("navbar");
+  const { t } = useTranslation(["navbar"]);
   return (
     <nav className="hidden sm:block">
       <div className="flex space-x-12 items-center">
-        <NavItemLink title={t("notes")} href="/notes">
+        <NavItemLink title={t("navbar:notes")} href="/notes">
           <Library />
         </NavItemLink>
-        <NavItemLink title={t("courses")} href="/courses">
+        <NavItemLink title={t("navbar:courses")} href="/courses">
           <Brain />
         </NavItemLink>
-        <NavItemLink title={t("projects")} href="/projects">
+        <NavItemLink title={t("navbar:projects")} href="/projects">
           <Wand />
         </NavItemLink>
-        <NavItemLink title={t("workWithMe")} href="/work">
+        <NavItemLink title={t("navbar:workWithMe")} href="/work">
           <BriefcaseBusiness />
         </NavItemLink>
       </div>
@@ -65,7 +65,7 @@ function NavDesktop() {
 }
 
 export const NavBar = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation(["common", "navbar"]);
 
   return (
     <header className="fixed top-0 w-full z-30 dark:bg-[rgb(9,10,11)]/75 bg-white/75 dark:bg-react/75 backdrop-blur-sm">
@@ -82,7 +82,7 @@ export const NavBar = () => {
           <LanguageSwitcher />
           <SignedOut>
             <span>
-              <SignInButton>{t("signIn")}</SignInButton>
+              <SignInButton>{t("navbar:signIn")}</SignInButton>
             </span>
           </SignedOut>
           <SignedIn>
